@@ -1,0 +1,120 @@
+//$icons: sprite-map("icons/*.png", $spacing: 1px);
+
+ @function sprite-path($icon_name) {
+	
+	$icon_path: sprite-file($icons, $icon_name);
+ 	@return $icon_path;
+
+ 	// for centering block with icon
+ 	// udisplay: block;se:
+ 	// position: absolute
+	// top: 50%
+	// left: 50%
+ 	// margin-left: - image-width( sprite-path("minus-small") )/2
+ 	// margin-top: - image-height( sprite-path("minus-small") )/2
+ 	// +sprite-icon("minus-small")
+
+ }
+
+@mixin sprite-wh($icon_name) {
+
+	$icon_path: sprite-file($icons, $icon_name);
+
+	$icon_with: image-width($icon_path);
+	$icon_height: image-height($icon_path);
+	
+	width: $icon_with;
+	height: $icon_height;
+
+} // sprite-wh
+
+
+
+@mixin sprite-icon($icon_name, $dimensions:null) {
+
+	$icon_path: sprite-file($icons, $icon_name);
+
+	background: sprite($icons, $icon_name) no-repeat;
+
+	@if $dimensions == null {
+
+		@include sprite-wh($icon_name);
+	}
+
+} // sprite-icon
+
+
+@mixin sprite-path($icon_name:null) {
+	
+	$path: sprite-url($icons);
+
+	background-image: $path;
+	background-repeat: no-repeat;
+
+	@if $icon_name != null {
+
+		@include sprite-wh($icon_name);
+	}
+	
+} // sprite-path
+
+
+@mixin sprite-icon-pos($icon_name) {
+
+	$icon_pos: sprite-position($icons, $icon_name);
+	
+	background-position: $icon_pos;
+
+} // sprite-icon-pos
+
+
+@mixin sprite-icon-pos-each($icon_names, $icon_hover:null, $icon_active:null) {
+
+	@each $icon_name in $icon_names {
+		&_tp_#{$icon_name} {
+			@include sprite-icon-pos($icon_name);
+			}
+
+			@if $icon_hover != null {
+				&_tp_#{$icon_name}:hover {
+					@include sprite-icon-pos(#{$icon_name}_hover);
+					}
+			}
+
+			@if $icon_active != null {
+				&_tp_#{$icon_name}:active {
+					@include sprite-icon-pos(#{$icon_name}_active);
+					}
+			}
+			
+	}
+
+} // sprite-icon-pos-each
+
+
+// ---- For download-icons ----
+
+// $icons_diagonal: sprite-map("download-icons/*.png", $spacing: 1px, $layout: diagonal);
+
+// @mixin sprite-path($icon_name:null) {
+	
+// 	$path: sprite-url($icons_diagonal);
+
+// 	background-image: $path;
+// 	background-repeat: no-repeat;
+
+// 	@if $icon_name != null {
+
+// 		@include sprite-wh($icon_name);
+// 	}
+	
+// } // sprite-path
+
+
+// @mixin sprite-icon-pos($icon_name) {
+
+// 	$icon_pos: sprite-position($icons_diagonal, $icon_name);
+	
+// 	background-position: $icon_pos;
+
+// } // sprite-icon-pos

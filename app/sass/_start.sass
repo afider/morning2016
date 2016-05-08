@@ -1,0 +1,113 @@
+html
+	@include rem-baseline
+
+body
+	background: #fff
+	color: $text_color
+	+rem(font-size, 18px)
+	line-height: 1.4
+	font-family: $font_main
+
+
+p
+	margin: 0 0 $content_bot_space 0
+
+ul
+	margin: 0 0 $content_bot_space -20px
+
+ol
+	margin: 0 0 $content_bot_space -20px
+
+ul li,
+ol li
+	margin-bottom: 8px
+
+
+/*  Headers
+/*  -------------------------------------------- */
+
+#{headings(1, 6)}
+	text-align: center
+	margin: 0 0 50px 0
+	padding: 0
+	line-height: 1.2
+	font-weight: bold
+	text-transform: uppercase
+	+rem(font-size, 70px)
+
+#{headings(1, 1)}
+	
+
+#{headings(2, 2)}
+	
+
+#{headings(3, 6)}
+	
+
+
+/* Headers
+/* ---------------------------------------END--- */
+
+
+/* fonts
+/* --------------------------------------------- */
+
++font-face( $family: "Etelka Text Pro", $file_name_r: "etelka-text-pro-webfont", $file_name_i: "etelka-text-pro-italic-webfont", $file_name_b: "etelka-text-pro-bold-webfont", $file_name_bi: "etelka-text-pro-bold-italic-webfont")
++font-face( $family: "Etelka Text Pro Light", $file_name_r: "etelka-text-pro-light-webfont")
+
+
+%font-regular
+	font-family: $font_main
+
+.font-regular
+	@extend %font-regular
+
+%font-light
+	font-family: 'Etelka Text Pro Light', $font_main
+
+.font-light
+	@extend %font-light
+
+/* fonts
+/* ---------------------------------------END--- */
+
+
+/* Links
+/* --------------------------------------------- */
+
+a, .u
+	text-decoration: none
+
+.dashed,
+.dotted
+	cursor: pointer
+
+
+.dashed
+	border-bottom-style: dashed
+
+.dotted
+	border-bottom-style: dotted
+
+/* Links
+/* -------------------------------------END----- */
+
+::-moz-selection
+	background: $color_main
+	text-shadow: none
+
+::selection
+	background: $color_main
+	text-shadow: none
+
+hr
+	display: block
+	margin: 1em 0
+	padding: 0
+	height: 1px
+	border: 0
+	border-top: 1px solid #ccc
+
+textarea
+	resize: vertical
+

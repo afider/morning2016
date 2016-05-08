@@ -1,0 +1,26 @@
+{
+  "name": "project_name",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-compress": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-remove-logging": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-wiredep": "latest",
+    "grunt-open": "latest",
+    "grunt-ftp-deploy": "latest",
+    "grunt-include-replace": "latest",
+    "grunt-svg2string": "latest",
+    "grunt-svgmin": "^2.0.1",
+    "grunt-svgstore": "latest",
+    "grunt-postcss": "latest",
+    "autoprefixer": "latest"
+  }
+}

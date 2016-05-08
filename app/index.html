@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body class="layout_type_index">
+  	<div id="svg-icons"></div>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+       
+        <div class="b-main-nav">
+          <ul class="b-main-nav__lst">
+            <li class="b-main-nav__item is-active">
+              <a href="index.html" class="item-link close-panel b-main-nav__act">
+                Главная
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="cabinet.html" class="item-link close-panel b-main-nav__act">
+                Личный кабинет
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="forum-about.html" class="item-link close-panel b-main-nav__act">
+                О форуме
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="areas.html" class="item-link close-panel b-main-nav__act">
+                Площадки
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="news.html" class="item-link close-panel b-main-nav__act">
+                Новости
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="experts.html" class="item-link close-panel b-main-nav__act">
+                Эксперты
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="programs.html" class="item-link close-panel b-main-nav__act">
+                Программы
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="morning24.html" class="item-link close-panel b-main-nav__act">
+                Утро 24
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="left sliding">
+            	<div class="b-logo">
+            		<div class="b-logo__header">Утр</div>
+					<svg class="b-logo__icon">
+						<use xlink:href="#icon_logo"></use>
+					</svg>
+            		<div class="b-logo__year">2016</div>
+            		</div>
+            </div>
+            <div class="right">
+              <a href="#" class="link open-panel b-nav-button">
+              	<div class="b-nav-button__item b-nav-button__item_top"></div>
+              	<div class="b-nav-button__item b-nav-button__item_center"></div>
+              	<div class="b-nav-button__item b-nav-button__item_bottom"></div>
+              </a>
+            </div>
+            <div class="subnavbar">
+                <div class="b-sub-header">
+                  <div class="b-sub-header__item">
+                    <a href="schedule.html" class="b-button b-button_style_bordered">Мое расписание</a>
+                  </div>
+                  <div class="b-sub-header__item">
+                    <a href="map.html" class="b-button b-button_style_bordered">Карта</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block">
+                <div class="content-block-inner">
+                  
+
+					<div class="b-main-teasers">
+					  <ul class="b-main-teasers__lst">
+					    <li class="b-main-teasers__item">
+					      <a href="area-labor.html" class="item-link b-main-teasers__act">
+					      	<div class="b-main-teasers__icon-wrapper">
+					      		<svg class="b-main-teasers__icon b-main-teasers__icon_patriot">
+					      		  <use xlink:href="#icon_area_patriot"></use>
+					      		</svg>
+					      	</div>
+					        <div class="b-main-teasers__h">Урал</div>
+					        <div class="b-main-teasers__sub-h">патриотичный</div>
+					      </a>
+					    </li>
+					    <li class="b-main-teasers__item">
+					      <a href="area-labor.html" class="item-link b-main-teasers__act">
+					      	<div class="b-main-teasers__icon-wrapper">
+					      		<svg class="b-main-teasers__icon b-main-teasers__icon_labor">
+					      		  <use xlink:href="#icon_area_labor"></use>
+					      		</svg>
+					      	</div>
+					        <div class="b-main-teasers__h">Урал</div>
+					        <div class="b-main-teasers__sub-h">трудовой</div>
+					      </a>
+					    </li>
+					    <li class="b-main-teasers__item">
+					      <a href="area-labor.html" class="item-link b-main-teasers__act">
+					      	<div class="b-main-teasers__icon-wrapper">
+					      		<svg class="b-main-teasers__icon b-main-teasers__icon_health">
+					      		  <use xlink:href="#icon_area_health"></use>
+					      		</svg>
+					      	</div>
+					      	<div class="b-main-teasers__h">Урал</div>
+					      	<div class="b-main-teasers__sub-h">здоровый</div>
+					      </a>
+					    </li>
+					    <li class="b-main-teasers__item">
+					      <a href="area-labor.html" class="item-link b-main-teasers__act">
+					      	<div class="b-main-teasers__icon-wrapper">
+					      		<svg class="b-main-teasers__icon b-main-teasers__icon_policy">
+					      		  <use xlink:href="#icon_area_policy"></use>
+					      		</svg>
+					      	</div>
+					      	<div class="b-main-teasers__h">Урал</div>
+					      	<div class="b-main-teasers__sub-h">политический</div>
+					      </a>
+					    </li>
+					    <li class="b-main-teasers__item">
+					      <a href="area-labor.html" class="item-link b-main-teasers__act">
+					      	<div class="b-main-teasers__icon-wrapper">
+					      		<svg class="b-main-teasers__icon b-main-teasers__icon_history">
+					      		  <use xlink:href="#icon_area_history"></use>
+					      		</svg>
+					      	</div>
+					      	<div class="b-main-teasers__h">Урал</div>
+					      	<div class="b-main-teasers__sub-h">исторический</div>
+					      </a>
+					    </li>
+					    <li class="b-main-teasers__item">
+					      <a href="area-labor.html" class="item-link b-main-teasers__act">
+					      	<div class="b-main-teasers__icon-wrapper">
+					      		<svg class="b-main-teasers__icon b-main-teasers__icon_information">
+					      		  <use xlink:href="#icon_area_information"></use>
+					      		</svg>
+					      	</div>
+					      	<div class="b-main-teasers__h">Урал</div>
+					      	<div class="b-main-teasers__sub-h">информационный</div>
+					      </a>
+					    </li>
+					  </ul>
+					</div>
+
+
+                </div>
+              </div>
+
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <div class="b-footer-nav">
+                    	<div class="b-footer-nav__item b-footer-nav__item_wide">
+                    		<a href="areas.html" class="b-feedback-button b-feedback-button_with-header item-link">
+                    			<div class="b-feedback-button__button">
+                    				<div class="b-feedback-button__img">
+                    					<svg class="b-feedback-button__icon">
+                    						<use xlink:href="#icon_phone"></use>
+                    					</svg>
+                    				</div>
+                    			</div>
+                    			<div class="b-feedback-button__h">Связаться с организаторами</div>
+                    		</a>
+                    	</div>
+                    	<div class="b-footer-nav__item b-footer-nav__item_button">
+                    		<a href="notifications.html" class="b-footer-button item-link">
+                    			<div class="b-footer-button__tip b-tip">
+                    				<div class="b-tip__body">9</div>
+                    				<svg class="b-footer-button__icon b-footer-button__icon_bell">
+                    					<use xlink:href="#icon_bell"></use>
+                    				</svg>
+                    			</div>
+                    		</a>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+     </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/svg.js"></script>
+  </body>
+</html>

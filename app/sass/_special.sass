@@ -1,0 +1,63 @@
+.page
+	background: #fff
+
+.panel
+	background: $color_main url("../img/nav.png") right bottom no-repeat
+
+.subnavbar
+	height: $sub-navber_h
+
+.navbar
+	height: $navbar_h
+
+.navbar-inner,
+.subnavbar
+	padding: 0 15px
+
+.navbar, 
+.subnavbar,
+.toolbar
+	&:after
+		display: none
+	&:before
+		display: none
+
+.toolbar
+	height: $footer_h
+	background: #f8f8f8
+
+.toolbar .toolbar-inner
+	padding: 0
+
+.navbar
+	color: #fff
+	@extend %font-light
+	
+	&:after
+		display: none
+
+.navbar, 
+.subnavbar
+	background: $color_main
+
+.content-block
+	margin-top: 0
+	margin-bottom: 0
+
+.content-block-inner
+	&:after,
+	&:before
+		display: none
+
+.page-content
+	+transition-duration($animation-time)
+	+transition-property(padding-top)
+	padding-bottom: $footer_h + 10px
+
+.view-main[data-page="index"] .page-content
+	padding-top: $sub-navber_h + $navbar_h
+
+.panel .content-block
+	margin: 0
+	padding: 0
+

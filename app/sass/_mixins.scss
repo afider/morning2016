@@ -1,0 +1,245 @@
+	@mixin link-color (
+		$color: null,
+		$color_hover: null,
+		$color_visited: null,
+		$animation-time: null,
+		$children: null
+
+	) {
+
+		$underline_lighteen: 30;
+		
+		$lighteen_per: $underline_lighteen * 1%;
+		$lighteen_rgba: $underline_lighteen / 100;
+
+		@if $color != null {
+			
+			@if $children != null {
+
+				#{$children} {
+					color: $color;
+					border-color: lighten($color, $lighteen_per);
+					border-color: rgba($color, $lighteen_rgba);
+					}
+				
+			} @else {
+				
+				color: $color;
+				border-color: lighten($color, $lighteen_per);
+				border-color: rgba($color, $lighteen_rgba);	
+			}
+		}
+		
+		
+		@if $animation-time != null {
+
+			@if $children != null {
+
+				#{$children} {
+					@include transition-property(color, border);
+					@include transition-duration($animation-time);
+					@include transition-timing-function(ease-out);
+					}
+				
+			} @else {
+				
+				@include transition-property(color, border);
+				@include transition-duration($animation-time);
+				@include transition-timing-function(ease-out);	
+			}
+		}
+		
+		&:visited {
+
+			@if $color != null and $color_visited == none  {
+
+				@if $children != null {
+
+					#{$children} {
+						color: $color;
+						border-color: lighten($color, $lighteen_per);
+						border-color: rgba($color, $lighteen_rgba);
+					}
+
+				} @else {
+
+					color: $color;
+					border-color: lighten($color, $lighteen_per);
+					border-color: rgba($color, $lighteen_rgba);
+				}
+			}
+			@else if $color == null and $color_visited == none  {
+
+				@if $children != null {
+
+					#{$children} {
+						color: $link_color;
+						border-color: lighten($link_color, $lighteen_per);
+						border-color: rgba($link_color, $lighteen_rgba);
+					}
+
+				} @else {
+
+					color: $link_color;
+					border-color: lighten($link_color, $lighteen_per);
+					border-color: rgba($link_color, $lighteen_rgba);
+				}
+			}
+			@else if ($color != null and $color_visited != none and $color_visited != null) or
+			 	($color != null and $color_visited == null) or
+			 	($color == null and $color_visited == null) {
+
+
+				@if $children != null {
+
+					#{$children} {
+						color: $link_color_visited;
+						border-color: lighten($link_color_visited, $lighteen_per);
+						border-color: rgba($link_color_visited, $lighteen_rgba);
+					}
+
+				} @else {
+
+					color: $link_color_visited;
+					border-color: lighten($link_color_visited, $lighteen_per);
+					border-color: rgba($link_color_visited, $lighteen_rgba);
+				}
+			}
+		}
+
+		&:hover {
+
+			@if $animation-time != null {
+
+				@if $children != null {
+
+					#{$children} {
+						@include transition-duration($animation-time);
+					}
+
+				} @else {
+
+					@include transition-duration($animation-time);
+				}
+				
+			}
+
+			@if ($color_visited != none and $color_visited != null) {
+				
+				@if $children != null {
+
+					#{$children} {
+						color: $link_color_hover;
+						border-color: lighten($link_color_hover, $lighteen_per);
+						border-color: rgba($link_color_hover, $lighteen_rgba);
+					}
+
+				} @else {
+
+					color: $link_color_hover;
+					border-color: lighten($link_color_hover, $lighteen_per);
+					border-color: rgba($link_color_hover, $lighteen_rgba);
+				}
+			}
+			@else if ($color_hover != null and $color_visited != none) or 
+					 ($color_hover != null and $color_visited == none) {
+				
+				@if $children != null {
+
+					#{$children} {
+						color: $color_hover;
+						border-color: lighten($color_hover, $lighteen_per);
+						border-color: rgba($color_hover, $lighteen_rgba);
+					}
+
+				} @else {
+
+					color: $color_hover;
+					border-color: lighten($color_hover, $lighteen_per);
+					border-color: rgba($color_hover, $lighteen_rgba);
+				}
+			}
+			@else if ($color == null and $color_hover == null and $color_visited == none) or
+					 ($color != null and $color_hover == null and $color_visited == none) or 
+					 ($color != null and $color_hover == null and $color_visited == null) {
+
+				@if $children != null {
+
+					#{$children} {
+						color: $link_color_hover;
+						border-color: lighten($link_color_hover, $lighteen_per);
+						border-color: rgba($link_color_hover, $lighteen_rgba);
+					}
+
+				} @else {
+
+					color: $link_color_hover;
+					border-color: lighten($link_color_hover, $lighteen_per);
+					border-color: rgba($link_color_hover, $lighteen_rgba);
+				}
+			}
+		}
+	} // link-color
+
+
+	@mixin font-face (
+		$family,
+		$file_name_r,
+		$file_name_i: null,
+		$file_name_b: null,
+		$file_name_bi: null
+
+
+	) {
+
+
+		@font-face {
+			font-family: '#{$family}';
+			src: url('../fonts/#{$file_name_r}.woff2') format('woff2'),
+				 url('../fonts/#{$file_name_r}.woff') format('woff'),
+				 url('../fonts/#{$file_name_r}.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+
+		@if $file_name_b != null {
+
+			@font-face {
+				font-family: '#{$family}';
+				src: url('../fonts/#{$file_name_b}.woff2') format('woff2'),
+					 url('../fonts/#{$file_name_b}.woff') format('woff'),
+					 url('../fonts/#{$file_name_b}.ttf') format('truetype');
+				font-weight: bold;
+				font-style: normal;
+			}
+			
+		} // if
+
+		@if $file_name_i != null {
+
+			@font-face {
+				font-family: '#{$family}';
+				src: url('../fonts/#{$file_name_i}.woff2') format('woff2'),
+					 url('../fonts/#{$file_name_i}.woff') format('woff'),
+					 url('../fonts/#{$file_name_i}.ttf') format('truetype');
+				font-weight: normal;
+				font-style: italic;
+			}
+			
+		} // if
+
+		@if $file_name_bi != null {
+
+			@font-face {
+				font-family: '#{$family}';
+				src: url('../fonts/#{$file_name_bi}.woff2') format('woff2'),
+					 url('../fonts/#{$file_name_bi}.woff') format('woff'),
+					 url('../fonts/#{$file_name_bi}.ttf') format('truetype');
+				font-weight: bold;
+				font-style: italic;
+			}
+			
+		} // if
+
+	} // font-face

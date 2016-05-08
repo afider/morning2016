@@ -1,0 +1,445 @@
+::-webkit-input-placeholder
+	color: $placeholder_color
+	font-style: italic
+	
+
+::-moz-placeholder
+	color: $placeholder_color
+	font-style: italic
+
+input:-ms-input-placeholder
+	color: $placeholder_color
+	font-style: italic
+
+%active-state
+	opacity: 0.3
+	-webkit-transition-duration: 0ms
+	transition-duration: 0ms
+
+/* svg-icons
+/* --------------------------------------------- */
+
+#svg-icons
+	position: absolute
+	top: 0
+	left: 0
+	height: 0
+	width: 0
+	z-index: -100
+
+
+/* svg-icons
+/* ---------------------------------------END--- */
+
+
+/* b-sub-header
+/* --------------------------------------------- */
+
+.b-sub-header
+	display: flex
+	width: 100%
+	&__item
+		width: 50%
+		&:first-child
+			padding-right: 8px
+		&:last-child
+			padding-left: 8px
+
+/* b-sub-header
+/* ---------------------------------------END--- */
+
+
+/* b-button
+/* --------------------------------------------- */
+
+.b-button
+	b
+	background: $color_main
+	color: #fff !important
+	text-decoration: none
+	text-align: center
+	display: block
+	border-radius: 12px
+	line-height: 26px
+	height: 26px
+	box-sizing: border-box
+	-webkit-appearance: none
+	-moz-appearance: none
+	-ms-appearance: none
+	appearance: none
+	padding: 0 20px
+	margin: 0
+	
+	white-space: nowrap
+	position: relative
+	overflow: hidden
+	text-overflow: ellipsis
+	+rem(font-size, 12px)
+	font-family: inherit
+	cursor: pointer
+	outline: 0
+
+	&_style_bordered
+		border: 2px solid #fff
+
+	&:active
+		@extend %active-state
+
+
+
+/* b-button
+/* ---------------------------------------END--- */
+
+
+/* b-logo
+/* --------------------------------------------- */
+
+.b-logo
+	color: #fff
+	+rem(font-size, 17px)
+	text-transform: uppercase
+
+	&__header
+		font-weight: bold
+		display: inline-block
+		@extend %font-regular
+	&__year
+		@extend %font-light
+		display: inline-block
+		position: relative
+		margin-left: -5px
+
+	&__icon
+		width: 13px
+		height: 13px
+		position: relative
+		margin-left: -4px
+		display: inline-block
+
+/* b-logo
+/* ---------------------------------------END--- */
+
+
+/* b-back
+/* --------------------------------------------- */
+
+.b-back
+	color: #fff
+	&__icon
+		width: 18px
+		height: 10px
+
+/* b-back
+/* ---------------------------------------END--- */
+
+
+/* b-nav-button
+/* --------------------------------------------- */
+
+.b-nav-button
+	display: inline-block
+	position: relative
+	width: 18px !important
+	height: 14px !important
+	&__item
+		position: absolute
+		left: 0
+		right: 0
+		height: 2px
+		background: #fff
+
+		&_top
+			top: 0
+		&_center
+			top: 50%
+			margin-top: -1px
+		&_bottom
+			bottom: 0
+
+/* b-nav-button
+/* ---------------------------------------END--- */
+
+
+/* b-footer-nav
+/* --------------------------------------------- */
+
+.b-footer-nav
+	display: flex
+	width: 100%
+	height: $footer_h
+	&__item
+		width: (100%/5)
+		&_wide
+			//background: yellow
+			width: 100%
+
+		&_button
+			width: 64px
+			//background: red
+			
+
+/* b-footer-nav
+/* ---------------------------------------END--- */
+
+
+/* b-feedback-button
+/* --------------------------------------------- */
+
+.b-feedback-button
+	height: $footer_h
+	display: block
+	background: $color_second
+	white-space: nowrap
+
+	&_with-header &__button
+		display: inline-block
+		max-width: 64px
+		min-width: 64px
+
+	&__button
+		display: block
+		height: $footer_h
+		vertical-align: middle
+		position: relative
+
+	&__img
+		width: 22px
+		height: 22px
+		border-radius: 50%
+		background: #fff
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: 2px
+		@include translate(-50%, -50%)
+
+	&__icon
+		position: absolute
+		top: 50%
+		left: 50%
+		@include translate(-50%, -50%)
+		width: 12px
+		height: 12px
+		color: #fbd079
+
+	&__h
+		display: inline-block
+		vertical-align: middle
+		height: $footer_h
+		line-height: $footer_h + 7
+		color: #fff
+		text-transform: uppercase
+		+rem(font-size, 11px)
+
+/* b-feedback-button
+/* ---------------------------------------END--- */
+
+
+/* b-footer-button
+/* --------------------------------------------- */
+
+.b-footer-button
+	display: block
+	height: $footer_h
+	position: relative
+
+	&:active
+		@extend %active-state
+	
+	&.is-active &__icon
+		color: $color_second
+
+	&__icon
+		position: absolute
+		top: 50%
+		left: 50%
+		@include translate(-50%, -50%)
+		color: $color_icons
+
+		&_bell
+			width: 18px
+			height: 22px
+
+		&_poll
+			width: 22px
+			height: 19px
+
+		&_location
+			width: 18px
+			height: 22px
+
+		&_calendar
+			width: 22px
+			height: 22px
+
+	&__tip
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		@include translate(-50%, -50%)
+
+	&__tip &__icon
+		display: block
+		position: relative
+		top: 0
+		left: 0
+		@include translate(0, 0)
+
+/* b-footer-button
+/* ---------------------------------------END--- */
+
+
+/* b-tip
+/* --------------------------------------------- */
+
+.b-tip
+	position: absolute
+
+	&__body
+		z-index: 2
+		position: absolute
+		top: -7px
+		right: -50%
+		background: $color_imp
+		color: #fff
+		min-width: 16px
+		height: 16px
+		line-height: 17px
+		text-align: center
+		border-radius: 8px
+		padding: 0 2px
+		+rem(font-size, 9px)
+		box-sizing: border-box
+
+/* b-tip
+/* ---------------------------------------END--- */
+
+
+/* b-main-nav
+/* --------------------------------------------- */
+
+.b-main-nav
+	padding-top: $navbar_h
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__item
+		margin: 0
+		padding: 0
+		display: block
+
+	&__item.is-active &__act
+		background: #2fa5d9
+
+	&__act
+		display: block
+		+rem(font-size, 16px)
+		font-weight: bold
+		text-transform: uppercase
+		color: #fff
+		padding: 0 20px 0 30px
+		height: 40px
+		line-height: 46px
+		letter-spacing: 1px
+
+		&:active
+			@extend %active-state
+
+		
+
+/* b-main-nav
+/* ---------------------------------------END--- */
+
+
+/* b-main-teasers
+/* --------------------------------------------- */
+
+.b-main-teasers
+	color: #fff
+	$item-margin: 3px
+	&__lst
+		margin: -$item-margin -$item-margin 0 -$item-margin
+		padding: 0
+		list-style-type: none
+		display: flex
+		flex-wrap: wrap
+		
+	&__item
+		display: block
+		width: 100%
+		margin: 0
+		padding: $item-margin
+		box-sizing: border-box
+		
+		+min-screen($mq_phone_portrait - 1)
+			width: (100%/2)
+
+		+min-screen($mq_tablet_portrait + 1)
+			width: (100%/3)
+
+		+min-screen($mq_tablet_landscape + 1)
+			width: (100%/4)
+
+
+	&__act
+		display: block
+		color: #fff
+		background: $color_main
+		padding: 10px
+
+		&:active
+			@extend %active-state
+
+	&__icon-wrapper
+		height: 60px
+		position: relative
+
+	&__icon
+		position: absolute
+		top: 50%
+		left: 50%
+		@include translate(-50%, -50%)
+		color: #fff
+
+		&_patriot
+			width: 29px
+			height: 42px
+
+		&_labor
+			width: 34px
+			height: 39px
+
+		&_health
+			width: 42px
+			height: 38px
+
+		&_policy
+			width: 33px
+			height: 41px
+
+		&_history
+			width: 33px
+			height: 41px
+
+		&_information
+			width: 36px
+			height: 31px
+
+	&__h,		
+	&__sub-h
+		text-transform: uppercase
+		letter-spacing: 1px
+		+rem(font-size, 10px)
+
+	&__h
+		
+	&__sub-h
+		font-weight: bold
+		
+
+/* b-main-teasers
+/* ---------------------------------------END--- */
