@@ -243,3 +243,16 @@
 		} // if
 
 	} // font-face
+
+
+	@mixin new-svg-h (
+		$new_w,
+		$old_w,
+		$old_h
+	) {
+
+		$new_h: ($old_h * $new_w) / $old_w;
+
+		width: $new_w;
+		height: $new_h;
+	}

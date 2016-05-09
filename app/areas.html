@@ -1,3 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body>
+    <div id="svg-icons"></div>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+       
+        <div class="b-main-nav">
+          <ul class="b-main-nav__lst">
+            <li class="b-main-nav__item">
+              <a href="index.html" class="item-link close-panel b-main-nav__act">
+                Главная
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="cabinet.html" class="item-link close-panel b-main-nav__act">
+                Личный кабинет
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="forum-about.html" class="item-link close-panel b-main-nav__act">
+                О форуме
+              </a>
+            </li>
+            <li class="b-main-nav__item is-active">
+              <a href="areas.html" class="item-link close-panel b-main-nav__act">
+                Площадки
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="news.html" class="item-link close-panel b-main-nav__act">
+                Новости
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="experts.html" class="item-link close-panel b-main-nav__act">
+                Эксперты
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="programs.html" class="item-link close-panel b-main-nav__act">
+                Программы
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="morning24.html" class="item-link close-panel b-main-nav__act">
+                Утро 24
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+
+
+
+
+
+
+
+
+
+
 
 <!-- We don't need full layout here, because this page will be parsed with Ajax-->
 <!-- Top Navbar-->
@@ -20,19 +105,200 @@
     </div>
   </div>
 </div>
-<div class="pages">
+<div class="pages navbar-through">
   <!-- Page, data-page contains page name-->
-  <div data-page="areas" class="page">
+  <div data-page="areas" class="page b-page-bg page-no-space">
     <!-- Scrollable page content-->
     <div class="page-content">
       <div class="content-block">
         <div class="content-block-inner">
-          <p>Площадки</p>
-          <p>Go <a href="#" class="back">back</a> or click  <a href="#" class="create-page">here </a>to create dynamic page.</p>
-          <p>Mauris posuere sit amet metus id venenatis. Ut ante dolor, tempor nec commodo rutrum, varius at sem. Nullam ac nisi non neque ornare pretium. Nulla mauris mauris, consequat et elementum sit amet, egestas sed orci. In hac habitasse platea dictumst.</p>
-          <p>Fusce eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis. Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel et nisi. Aenean aliquet, felis quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu metus elit. Ut vel diam dolor.</p>
+          
+          <div class="b-list">
+            <ul class="b-list__lst">
+              <li class="b-list__item">
+                <a href="area-labor.html" class="b-list__act item-link">
+                  <div class="b-list__img">
+                    <div class="b-list__circle">
+                      <svg class="b-list__icon b-list__icon_patriot">
+                        <use xlink:href="#icon_area_patriot"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="b-list__h">
+                    <div class="b-list__body">
+                      Карта-схема площадок
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="b-list__item">
+                <a href="area-labor.html" class="b-list__act item-link">
+                  <div class="b-list__img">
+                    <div class="b-list__circle">
+                      <svg class="b-list__icon b-list__icon_patriot">
+                        <use xlink:href="#icon_area_patriot"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="b-list__h">
+                    <div class="b-list__body">
+                      Урал <span class="b-list__b">патриотичный</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="b-list__item">
+                <a href="area-labor.html" class="b-list__act item-link">
+                  <div class="b-list__img">
+                    <div class="b-list__circle">
+                      <svg class="b-list__icon b-list__icon_labor">
+                        <use xlink:href="#icon_area_labor"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="b-list__h">
+                    <div class="b-list__body">
+                      Урал <span class="b-list__b">трудовой</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="b-list__item">
+                <a href="area-labor.html" class="b-list__act item-link">
+                  <div class="b-list__img">
+                    <div class="b-list__circle">
+                      <svg class="b-list__icon b-list__icon_health">
+                        <use xlink:href="#icon_area_health"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="b-list__h">
+                    <div class="b-list__body">
+                      Урал <span class="b-list__b">здоровый</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="b-list__item">
+                <a href="area-labor.html" class="b-list__act item-link">
+                  <div class="b-list__img">
+                    <div class="b-list__circle">
+                      <svg class="b-list__icon b-list__icon_policy">
+                        <use xlink:href="#icon_area_policy"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="b-list__h">
+                    <div class="b-list__body">
+                      Урал <span class="b-list__b">политический</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="b-list__item">
+                <a href="area-labor.html" class="b-list__act item-link">
+                  <div class="b-list__img">
+                    <div class="b-list__circle">
+                      <svg class="b-list__icon b-list__icon_history">
+                        <use xlink:href="#icon_area_history"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="b-list__h">
+                    <div class="b-list__body">
+                      Урал <span class="b-list__b">исторический</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="b-list__item">
+                <a href="area-labor.html" class="b-list__act item-link">
+                  <div class="b-list__img">
+                    <div class="b-list__circle">
+                      <svg class="b-list__icon b-list__icon_information">
+                        <use xlink:href="#icon_area_information"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="b-list__h">
+                    <div class="b-list__body">
+                      Урал <span class="b-list__b">информационный</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
+    <div class="toolbar">
+        <div class="toolbar-inner">
+            <div class="b-footer-nav">
+              <div class="b-footer-nav__item">
+                <a href="areas.html" class="b-feedback-button item-link">
+                  <div class="b-feedback-button__button">
+                    <div class="b-feedback-button__img">
+                      <svg class="b-feedback-button__icon">
+                        <use xlink:href="#icon_phone"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="b-footer-nav__item">
+                <a href="schedule.html" class="b-footer-button item-link">
+                  <svg class="b-footer-button__icon b-footer-button__icon_calendar">
+                    <use xlink:href="#icon_calendar"></use>
+                  </svg>
+                </a>
+              </div> 
+              <div class="b-footer-nav__item">
+                <a href="map.html" class="b-footer-button item-link">
+                  <svg class="b-footer-button__icon b-footer-button__icon_location">
+                    <use xlink:href="#icon_location"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="b-footer-nav__item">
+                <a href="polls.html" class="b-footer-button item-link">
+                  <svg class="b-footer-button__icon b-footer-button__icon_poll">
+                    <use xlink:href="#icon_poll"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="b-footer-nav__item">
+                <a href="notifications.html" class="b-footer-button item-link">
+                  <div class="b-footer-button__tip b-tip">
+                    <div class="b-tip__body">9</div>
+                    <svg class="b-footer-button__icon b-footer-button__icon_bell">
+                      <use xlink:href="#icon_bell"></use>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+     </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/svg.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+  </body>
+</html>

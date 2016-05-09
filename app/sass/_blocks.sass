@@ -16,6 +16,12 @@ input:-ms-input-placeholder
 	-webkit-transition-duration: 0ms
 	transition-duration: 0ms
 
+%active-state-bg
+	background: $color_second
+
+%active-state-text
+	color: $color_second
+
 /* svg-icons
 /* --------------------------------------------- */
 
@@ -392,7 +398,7 @@ input:-ms-input-placeholder
 		padding: 10px
 
 		&:active
-			@extend %active-state
+			@extend %active-state-bg
 
 	&__icon-wrapper
 		height: 60px
@@ -442,4 +448,125 @@ input:-ms-input-placeholder
 		
 
 /* b-main-teasers
+/* ---------------------------------------END--- */
+
+
+/* b-page-bg
+/* --------------------------------------------- */
+
+.b-page-bg
+	background: $color_bg !important
+
+/* b-page-bg
+/* ---------------------------------------END--- */
+
+
+/* b-list
+/* --------------------------------------------- */
+
+.b-list
+	background: #fff
+	border-bottom: 1px solid $color_border
+	margin-bottom: $content_bot_space
+	$circle-dim: 40px
+	$height: 60px
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__item
+		margin: 0
+		padding: 0
+		
+	&__act
+		display: flex
+		padding-left: $page-inner-space
+		height: $height
+		color: inherit
+
+		&:active
+			@extend %active-state
+			
+	
+	&__item:last-child &__img
+		border-bottom: none
+		
+	&__img
+		width: $circle-dim
+		border-bottom: 1px solid $color_border
+		display: flex
+		align-items: center
+	
+	&__circle
+		width: $circle-dim
+		height: $circle-dim
+		background: $color_main
+		border-radius: 50%
+		position: relative
+
+	&__icon
+		position: absolute
+		top: 50%
+		left: 50%
+		@include translate(-50%, -50%)
+		color: #fff
+
+		&_patriot
+			//width: 29px
+			//height: 42px
+			+new-svg-h($new_w: 18px, $old_w: 29px, $old_h: 42px)
+
+		&_labor
+			//width: 34px
+			//height: 39px
+			+new-svg-h($new_w: 20px, $old_w: 34px, $old_h: 39px)
+
+		&_health
+			//width: 42px
+			//height: 38px
+			+new-svg-h($new_w: 24px, $old_w: 42px, $old_h: 38px)
+
+		&_policy
+			//width: 33px
+			//height: 41px
+			+new-svg-h($new_w: 21px, $old_w: 33px, $old_h: 41px)
+
+		&_history
+			//width: 33px
+			//height: 41px
+			+new-svg-h($new_w: 21px, $old_w: 33px, $old_h: 41px)
+
+		&_information
+			//width: 36px
+			//height: 31px
+			+new-svg-h($new_w: 25px, $old_w: 36px, $old_h: 31px)
+	
+	&__item:last-child &__h
+		border-bottom: none
+
+	&__h
+		width: 100%
+		border-bottom: 1px solid $color_border
+		padding-right: $page-inner-space
+		padding-left: $page-inner-space
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		+rem(font-size, 15px)
+		text-transform: uppercase
+
+	&__body
+		line-height: 1
+
+	&__b
+		font-weight: bold
+
+	&__avatar
+		width: $circle-dim
+		height: $circle-dim
+		border-radius: 50%
+
+/* b-list
 /* ---------------------------------------END--- */

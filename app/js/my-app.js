@@ -6,10 +6,8 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-$$(document).on('ready', function (e) { 
-    // Insert SVG-icons into page
-    document.getElementById('svg-icons').innerHTML = SVG_ICONS;
-});
+document.getElementById('svg-icons').innerHTML = SVG_ICONS;
+
 
 // Add view
 var mainView = myApp.addView('.view-main', {
