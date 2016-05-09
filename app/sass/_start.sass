@@ -31,13 +31,10 @@ img
 /*  -------------------------------------------- */
 
 #{headings(1, 6)}
-	text-align: center
-	margin: 0 0 50px 0
+	margin: 0 0 $content_bot_space 0
 	padding: 0
-	line-height: 1.2
 	font-weight: bold
-	text-transform: uppercase
-	+rem(font-size, 70px)
+	+rem(font-size, 18px)
 
 #{headings(1, 1)}
 	
@@ -67,9 +64,11 @@ img
 	@extend %font-regular
 
 %font-light
+	letter-spacing: 1px
 	font-family: 'Etelka Text Pro Light', $font_main
 
 .font-light
+	letter-spacing: 1px
 	@extend %font-light
 
 /* fonts
@@ -81,6 +80,12 @@ img
 
 a, .u
 	text-decoration: none
+	color: $link_color
+
+a:hover,
+a:active,
+a:visited
+	//color: $link_color
 
 .dashed,
 .dotted

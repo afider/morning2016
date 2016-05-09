@@ -431,14 +431,11 @@ img {
 /*  Headers */
 /*  -------------------------------------------- */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  text-align: center;
-  margin: 0 0 50px 0;
+  margin: 0 0 15px 0;
   padding: 0;
-  line-height: 1.2;
   font-weight: bold;
-  text-transform: uppercase;
-  font-size: 70px;
-  font-size: 7rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 /* Headers */
@@ -479,8 +476,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Etelka Text Pro", Arial, sans-serif;
 }
 
-.font-light, .b-logo__year, .navbar {
+.font-light, .b-logo__year, .b-person__legend, .navbar {
+  letter-spacing: 1px;
   font-family: "Etelka Text Pro Light", "Etelka Text Pro", Arial, sans-serif;
+}
+
+.font-light {
+  letter-spacing: 1px;
 }
 
 /* fonts */
@@ -489,6 +491,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 /* --------------------------------------------- */
 a, .u {
   text-decoration: none;
+  color: #31b5e8;
 }
 
 .dashed,
@@ -1073,6 +1076,42 @@ input:-ms-input-placeholder {
 }
 
 /* b-list */
+/* ---------------------------------------END--- */
+/* b-person */
+/* --------------------------------------------- */
+.b-person {
+  margin-bottom: 15px;
+}
+.b-person__photo {
+  display: block;
+}
+.b-person__h {
+  background: #31b5e8;
+  padding: 15px;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #fff;
+}
+.b-person__legend {
+  border-bottom: 1px solid #d6d6d6;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding: 15px 15px 15px 0;
+}
+.b-person__legend-body {
+  text-transform: uppercase;
+}
+.b-person__legend-h {
+  font-weight: bold;
+}
+.b-person__imp {
+  font-weight: bold;
+}
+.b-person__desc {
+  padding: 0 15px;
+}
+
+/* b-person */
 /* ---------------------------------------END--- */
 .page {
   background: #fff;
