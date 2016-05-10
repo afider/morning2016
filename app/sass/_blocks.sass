@@ -512,6 +512,11 @@ input:-ms-input-placeholder
 		left: 50%
 		@include translate(-50%, -50%)
 		color: #fff
+		
+		&_scheme
+			//width: 44px
+			//height: 44px
+			+new-svg-h($new_w: 20px, $old_w: 44px, $old_h: 44px)
 
 		&_patriot
 			//width: 29px
@@ -557,8 +562,11 @@ input:-ms-input-placeholder
 		+rem(font-size, 15px)
 		text-transform: uppercase
 
+		&_day
+			padding-left: 0
+
 	&__body
-		line-height: 1
+		line-height: 1.2
 
 	&__b
 		font-weight: bold
@@ -567,6 +575,18 @@ input:-ms-input-placeholder
 		width: $circle-dim
 		height: $circle-dim
 		border-radius: 50%
+
+	&__day-h
+		font-weight: bold
+		margin-bottom: 2px
+
+	&__day-num
+		color: $color_main
+		display: inline-block
+
+	&__day-year
+		color: $color_border
+		display: inline-block
 
 /* b-list
 /* ---------------------------------------END--- */
@@ -607,4 +627,132 @@ input:-ms-input-placeholder
 		padding: 0 $page-inner-space
 
 /* b-person
+/* ---------------------------------------END--- */
+
+
+/* b-tab-nav
+/* --------------------------------------------- */
+
+.b-tab-nav
+	display: flex
+	//justify-content: flex-start
+	overflow: auto
+	background: $color_bg
+	height: $sub-navbar_h
+	width: 100%
+	+rem(font-size, 12px)
+
+	&::-webkit-scrollbar
+		display: none !important
+		width: 0 !important
+		height: 0 !important
+		-webkit-appearance: none
+		opacity: 0 !important
+
+	&__item
+		flex-grow: 1
+		display: flex
+		align-items: center
+		padding: 0 $page-inner-space
+		position: relative
+		text-align: center
+		justify-content: center
+		color: $text_color_light
+
+		&.active
+			color: $color_second
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 2px
+				background: $color_second
+
+	&__text
+		line-height: 1.2
+
+/* b-tab-nav
+/* ---------------------------------------END--- */
+
+
+/* b-tabs
+/* --------------------------------------------- */
+
+.b-tabs
+	&__item
+		padding-bottom: 0 !important
+
+	&__content
+		padding: $page-inner-space
+		background: #fff
+
+		&_nospace
+			padding: 0
+
+/* b-tabs
+/* ---------------------------------------END--- */
+
+
+/* b-contacts
+/* --------------------------------------------- */
+
+.b-contacts
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__item
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: table
+		width: 100%
+	
+	&__photo
+		width: 90px
+		border-bottom: 1px solid #fff
+		display: table-cell
+		vertical-align: top
+
+	&__img
+		width: 90px
+		display: block
+
+	&__body
+		display: table-cell
+		vertical-align: top
+		border-bottom: 1px solid $color_border
+		padding: 10px $page-inner-space 10px 10px
+		+rem(font-size, 12px)
+		line-height: 1.2
+		min-height: 90px
+		
+	&__phone-icon
+		width: 16px
+		height: 16px
+		margin-right: 5px
+		vertical-align: middle
+		color: $color_main
+
+	&__phone-num
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		top: 2px
+
+	&__name
+		text-transform: uppercase
+		margin-bottom: 5px
+
+	&__desc
+		margin-bottom: 5px
+
+
+
+
+/* b-contacts
 /* ---------------------------------------END--- */

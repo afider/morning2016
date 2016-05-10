@@ -1032,6 +1032,10 @@ input:-ms-input-placeholder {
   transform: translate(-50%, -50%);
   color: #fff;
 }
+.b-list__icon_scheme {
+  width: 20px;
+  height: 20px;
+}
 .b-list__icon_patriot {
   width: 18px;
   height: 26.06897px;
@@ -1071,8 +1075,11 @@ input:-ms-input-placeholder {
   font-size: 1.5rem;
   text-transform: uppercase;
 }
+.b-list__h_day {
+  padding-left: 0;
+}
 .b-list__body {
-  line-height: 1;
+  line-height: 1.2;
 }
 .b-list__b {
   font-weight: bold;
@@ -1081,6 +1088,18 @@ input:-ms-input-placeholder {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+.b-list__day-h {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.b-list__day-num {
+  color: #31b5e8;
+  display: inline-block;
+}
+.b-list__day-year {
+  color: #d6d6d6;
+  display: inline-block;
 }
 
 /* b-list */
@@ -1121,6 +1140,125 @@ input:-ms-input-placeholder {
 
 /* b-person */
 /* ---------------------------------------END--- */
+/* b-tab-nav */
+/* --------------------------------------------- */
+.b-tab-nav {
+  display: flex;
+  overflow: auto;
+  background: #efefef;
+  height: 45px;
+  width: 100%;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+.b-tab-nav::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-appearance: none;
+  opacity: 0 !important;
+}
+.b-tab-nav__item {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  color: #5b5b5b;
+}
+.b-tab-nav__item.active {
+  color: #f8ae19;
+}
+.b-tab-nav__item.active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #f8ae19;
+}
+.b-tab-nav__text {
+  line-height: 1.2;
+}
+
+/* b-tab-nav */
+/* ---------------------------------------END--- */
+/* b-tabs */
+/* --------------------------------------------- */
+.b-tabs__item {
+  padding-bottom: 0 !important;
+}
+.b-tabs__content {
+  padding: 15px;
+  background: #fff;
+}
+.b-tabs__content_nospace {
+  padding: 0;
+}
+
+/* b-tabs */
+/* ---------------------------------------END--- */
+/* b-contacts */
+/* --------------------------------------------- */
+.b-contacts__lst {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.b-contacts__item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: table;
+  width: 100%;
+}
+.b-contacts__photo {
+  width: 90px;
+  border-bottom: 1px solid #fff;
+  display: table-cell;
+  vertical-align: top;
+}
+.b-contacts__img {
+  width: 90px;
+  display: block;
+}
+.b-contacts__body {
+  display: table-cell;
+  vertical-align: top;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 10px 15px 10px 10px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  min-height: 90px;
+}
+.b-contacts__phone-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+  color: #31b5e8;
+}
+.b-contacts__phone-num {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 2px;
+}
+.b-contacts__name {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.b-contacts__desc {
+  margin-bottom: 5px;
+}
+
+/* b-contacts */
+/* ---------------------------------------END--- */
 .page {
   background: #fff;
 }
@@ -1131,6 +1269,10 @@ input:-ms-input-placeholder {
 
 .subnavbar {
   height: 45px;
+}
+
+.subnavbar-no-space {
+  padding: 0 !important;
 }
 
 .navbar {
@@ -1177,6 +1319,7 @@ input:-ms-input-placeholder {
 .content-block {
   margin-top: 0;
   margin-bottom: 0;
+  color: #000;
 }
 
 .content-block-inner {
@@ -1212,4 +1355,27 @@ input:-ms-input-placeholder {
 .page-no-space .content-block {
   padding: 0;
   margin: 0;
+}
+
+.navbar-scrollable {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  overflow: auto;
+}
+
+.navbar-scrollable::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-appearance: none;
+  opacity: 0 !important;
+}
+
+.navbar-scrollable a.link, .navbar-scrollable a.tab-link {
+  width: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  padding: 0 16px;
 }

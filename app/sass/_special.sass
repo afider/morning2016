@@ -5,7 +5,10 @@
 	background: $color_main url("../img/nav.png") right bottom no-repeat
 
 .subnavbar
-	height: $sub-navber_h
+	height: $sub-navbar_h
+
+.subnavbar-no-space
+	padding: 0 !important
 
 .navbar
 	height: $navbar_h
@@ -43,6 +46,7 @@
 .content-block
 	margin-top: 0
 	margin-bottom: 0
+	color: #000
 
 .content-block-inner
 	padding: $page-inner-space $page-inner-space 0 $page-inner-space
@@ -57,14 +61,34 @@
 	padding-bottom: $footer_h + 10px
 
 .view-main[data-page="index"] .page-content
-	padding-top: $sub-navber_h + $navbar_h
+	padding-top: $sub-navbar_h + $navbar_h
 
 .panel .content-block
 	margin: 0
 	padding: 0
-
+	
 
 .page-no-space .content-block-inner,
 .page-no-space .content-block
 	padding: 0
 	margin: 0
+
+.navbar-scrollable
+	-webkit-box-pack: start
+	-webkit-justify-content: flex-start
+	justify-content: flex-start
+	overflow: auto
+
+.navbar-scrollable::-webkit-scrollbar
+	display: none !important
+	width: 0 !important
+	height: 0 !important
+	-webkit-appearance: none
+	opacity: 0 !important
+
+.navbar-scrollable a.link,.navbar-scrollable a.tab-link
+	width: auto
+	-webkit-box-flex: 0
+	-webkit-flex-shrink: 0
+	flex-shrink: 0
+	padding: 0 16px
