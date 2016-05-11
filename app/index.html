@@ -14,6 +14,35 @@
   </head>
   <body>
   	<div id="svg-icons"></div>
+  	<div class="login-screen modal-in b-welcome-screen">
+  		<a href="#" data-popup=".b-selection-screen" class="close-login-screen open-popup b-welcome-screen__close">
+  			Выбрать очередь
+  		</a>
+  	</div>
+  	<div class="popup tablet-fullscreen popup-selection b-selection-screen">
+    	<div class="b-logo b-logo_layout_screen">
+    		<div class="b-logo__header">Утр</div>
+			<svg class="b-logo__icon">
+				<use xlink:href="#icon_logo"></use>
+			</svg>
+    		<div class="b-logo__year">2016</div>
+    	</div>
+
+    	<div class="b-section-list">
+    		<a href="#" data-popup=".b-selection-screen" class="b-section-list__item close-popup">
+    			<div class="b-section-list__item-body">
+    				<div class="b-section-list__title">Первая смена</div>
+    				<div class="b-section-list__period">20–25 июня</div>
+    			</div>
+    		</a>
+    		<a href="#" data-popup=".b-selection-screen" class="b-section-list__item close-popup">
+    			<div class="b-section-list__item-body">
+    				<div class="b-section-list__title">Вторая смена</div>
+    				<div class="b-section-list__period">25–30 июня</div>
+    			</div>
+    		</a>
+    	</div>
+  	</div>
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
@@ -84,7 +113,7 @@
 						<use xlink:href="#icon_logo"></use>
 					</svg>
             		<div class="b-logo__year">2016</div>
-            		</div>
+            	</div>
             </div>
             <div class="right">
               <a href="#" class="link open-panel b-nav-button">
@@ -115,7 +144,6 @@
               <div class="content-block">
                 <div class="content-block-inner">
                   
-
 					<div class="b-main-teasers">
 					  <ul class="b-main-teasers__lst">
 					    <li class="b-main-teasers__item">

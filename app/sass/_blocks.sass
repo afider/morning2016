@@ -73,13 +73,12 @@ input:-ms-input-placeholder
 	-moz-appearance: none
 	-ms-appearance: none
 	appearance: none
-	padding: 0 20px
+	padding: 0 15px
 	margin: 0
 	
 	white-space: nowrap
 	position: relative
 	overflow: hidden
-	text-overflow: ellipsis
 	+rem(font-size, 12px)
 	font-family: inherit
 	cursor: pointer
@@ -105,6 +104,13 @@ input:-ms-input-placeholder
 	+rem(font-size, 17px)
 	text-transform: uppercase
 
+	&_layout_screen
+		position: absolute
+		top: 60px
+		left: 50%
+		@include translate(-50%, 0)
+
+
 	&__header
 		font-weight: bold
 		display: inline-block
@@ -121,6 +127,8 @@ input:-ms-input-placeholder
 		position: relative
 		margin-left: -4px
 		display: inline-block
+	
+
 
 /* b-logo
 /* ---------------------------------------END--- */
@@ -752,7 +760,84 @@ input:-ms-input-placeholder
 		margin-bottom: 5px
 
 
-
-
 /* b-contacts
+/* ---------------------------------------END--- */
+
+
+
+/* b-welcome-screen
+/* --------------------------------------------- */
+
+.b-welcome-screen
+	position: relative
+	background: linear-gradient(to top, #0589c5, #38bbec)
+
+	&__close
+		background-image: url("../img/welcome.png")
+		background-position: center center
+		background-repeat: no-repeat
+
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		overflow: hidden
+		text-indent: 9999px
+
+/* b-welcome-screen
+/* ---------------------------------------END--- */
+
+
+/* b-selection-screen
+/* --------------------------------------------- */
+
+.b-selection-screen
+	background: $color_main
+
+
+/* b-selection-screen
+/* ---------------------------------------END--- */
+
+
+/* b-section-list
+/* --------------------------------------------- */
+
+.b-section-list
+	position: absolute
+	top: 50%
+	left: 0
+	right: 0
+	@include translate(0, -50%)
+
+	&__item
+		color: #fff
+		display: flex
+		align-items: center
+		height: 60px
+		background: $color_main_light
+		margin-bottom: 1px
+
+		&:active
+			@extend %active-state-bg
+	
+	&__item-body
+		width: 100%
+		text-align: center
+
+	&__title
+		+rem(font-size, 16px)
+		font-weight: bold
+		text-transform: uppercase
+		letter-spacing: 2px
+		
+
+	&__period
+		+rem(font-size, 12px)
+		text-transform: uppercase
+		letter-spacing: 2px
+
+
+/* b-section-list
 /* ---------------------------------------END--- */

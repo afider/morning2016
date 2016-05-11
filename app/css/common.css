@@ -552,7 +552,7 @@ input:-ms-input-placeholder {
   transition-duration: 0ms;
 }
 
-.b-main-teasers__act:active {
+.b-main-teasers__act:active, .b-section-list__item:active {
   background: #f8ae19;
 }
 
@@ -604,12 +604,11 @@ input:-ms-input-placeholder {
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  padding: 0 20px;
+  padding: 0 15px;
   margin: 0;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 12px;
   font-size: 1.2rem;
   font-family: inherit;
@@ -629,6 +628,13 @@ input:-ms-input-placeholder {
   font-size: 17px;
   font-size: 1.7rem;
   text-transform: uppercase;
+}
+.b-logo_layout_screen {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 .b-logo__header {
   font-weight: bold;
@@ -1255,6 +1261,76 @@ input:-ms-input-placeholder {
 }
 
 /* b-contacts */
+/* ---------------------------------------END--- */
+/* b-welcome-screen */
+/* --------------------------------------------- */
+.b-welcome-screen {
+  position: relative;
+  background: linear-gradient(to top, #0589c5, #38bbec);
+}
+.b-welcome-screen__close {
+  background-image: url("../img/welcome.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  text-indent: 9999px;
+}
+
+/* b-welcome-screen */
+/* ---------------------------------------END--- */
+/* b-selection-screen */
+/* --------------------------------------------- */
+.b-selection-screen {
+  background: #31b5e8;
+}
+
+/* b-selection-screen */
+/* ---------------------------------------END--- */
+/* b-section-list */
+/* --------------------------------------------- */
+.b-section-list {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.b-section-list__item {
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 60px;
+  background: #57c6f1;
+  margin-bottom: 1px;
+}
+.b-section-list__item-body {
+  width: 100%;
+  text-align: center;
+}
+.b-section-list__title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.b-section-list__period {
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* b-section-list */
 /* ---------------------------------------END--- */
 .page {
   background: #fff;
