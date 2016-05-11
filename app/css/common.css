@@ -998,7 +998,7 @@ input:-ms-input-placeholder {
   display: -webkit-flex;
   display: flex;
   padding-left: 15px;
-  height: 60px;
+  min-height: 60px;
   color: inherit;
 }
 .b-list__item:last-child .b-list__img {
@@ -1061,8 +1061,7 @@ input:-ms-input-placeholder {
 .b-list__h {
   width: 100%;
   border-bottom: 1px solid #d6d6d6;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 15px;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -1091,6 +1090,9 @@ input:-ms-input-placeholder {
   font-weight: bold;
   margin-bottom: 2px;
 }
+.b-list__day-h_size_sm {
+  text-transform: none;
+}
 .b-list__day-num {
   color: #31b5e8;
   display: inline-block;
@@ -1098,6 +1100,14 @@ input:-ms-input-placeholder {
 .b-list__day-year {
   color: #d6d6d6;
   display: inline-block;
+}
+.b-list__day-date_size_sm {
+  text-transform: none;
+}
+.b-list__day-time {
+  display: inline-block;
+  font-weight: bold;
+  color: #31b5e8;
 }
 
 /* b-list */

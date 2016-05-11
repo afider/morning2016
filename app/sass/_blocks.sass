@@ -491,7 +491,7 @@ input:-ms-input-placeholder
 	&__act
 		display: flex
 		padding-left: $page-inner-space
-		height: $height
+		min-height: $height
 		color: inherit
 
 		&:active
@@ -562,8 +562,7 @@ input:-ms-input-placeholder
 	&__h
 		width: 100%
 		border-bottom: 1px solid $color_border
-		padding-right: $page-inner-space
-		padding-left: $page-inner-space
+		padding: $page-inner-space
 		display: flex
 		align-items: center
 		flex-wrap: wrap
@@ -588,6 +587,9 @@ input:-ms-input-placeholder
 		font-weight: bold
 		margin-bottom: 2px
 
+		&_size_sm
+			text-transform: none
+
 	&__day-num
 		color: $color_main
 		display: inline-block
@@ -595,6 +597,15 @@ input:-ms-input-placeholder
 	&__day-year
 		color: $color_border
 		display: inline-block
+
+	&__day-date
+		&_size_sm
+			text-transform: none
+
+	&__day-time
+		display: inline-block
+		font-weight: bold
+		color: $color_main
 
 /* b-list
 /* ---------------------------------------END--- */
