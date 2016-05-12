@@ -44,6 +44,8 @@ input:-ms-input-placeholder
 .b-sub-header
 	display: flex
 	width: 100%
+	position: relative
+	top: -5px
 	&__item
 		width: 50%
 		&:first-child
@@ -59,15 +61,14 @@ input:-ms-input-placeholder
 /* --------------------------------------------- */
 
 .b-button
-	b
 	background: $color_main
 	color: #fff !important
 	text-decoration: none
 	text-align: center
-	display: block
-	border-radius: 12px
-	line-height: 26px
-	height: 26px
+	display: inline-block
+	border-radius: 16px
+	line-height: 32px
+	height: 32px
 	box-sizing: border-box
 	-webkit-appearance: none
 	-moz-appearance: none
@@ -86,6 +87,12 @@ input:-ms-input-placeholder
 
 	&_style_bordered
 		border: 2px solid #fff
+
+	&_width_fluid
+		display: block
+
+	&_color_cancel
+		background: $color_imp_light
 
 	&:active
 		@extend %active-state
@@ -574,6 +581,12 @@ input:-ms-input-placeholder
 
 	&__body
 		line-height: 1.2
+		width: 100%
+
+		&_arrow-right
+			position: relative
+			padding-right: $page-inner-space + 7
+
 
 	&__b
 		font-weight: bold
@@ -606,6 +619,15 @@ input:-ms-input-placeholder
 		display: inline-block
 		font-weight: bold
 		color: $color_main
+
+	&__arrow-right
+		position: absolute
+		top: 50%
+		right: 0
+		@include translate(0, -50%)
+		+new-svg-h($new_w: 7px, $old_w: 11px, $old_h: 20px)
+		color: $color_border
+
 
 /* b-list
 /* ---------------------------------------END--- */
@@ -851,4 +873,80 @@ input:-ms-input-placeholder
 
 
 /* b-section-list
+/* ---------------------------------------END--- */
+
+
+/* b-event
+/* --------------------------------------------- */
+
+.b-event
+	$prop_h: 52px
+	background: #fff
+	border-top: 2px solid #fff
+	margin-bottom: 30px
+	
+	&__header
+		display: flex
+		border-bottom: 1px solid $color_border
+
+		+max-screen($mq_phone_portrait - 1)
+			display: block
+
+	&__properties
+		width: 130px
+		+max-screen($mq_phone_portrait - 1)
+			width: auto
+
+	&__time
+		background: $color_main
+		box-sizing: border-box
+		padding: 0 $page-inner-space
+		+rem(font-size, 14px)
+		font-weight: bold
+		color: #fff
+		min-height: $prop_h
+		line-height: $prop_h
+		border-right: 1px solid $color_main
+
+	&__location
+		box-sizing: border-box
+		padding: 10px $page-inner-space
+		+rem(font-size, 12px)
+		min-height: $prop_h
+		border-right: 1px solid $color_border
+		line-height: 1.2
+		+max-screen($mq_phone_portrait - 1)
+			min-height: auto
+			border-bottom: 1px solid $color_border
+
+	&__title
+		padding: $page-inner-space
+		font-weight: bold
+		+rem(font-size, 20px)
+
+	&__body
+		padding: $page-inner-space
+		border-bottom: 1px solid $color_border
+
+/* b-event
+/* ---------------------------------------END--- */
+
+
+/* b-section
+/* --------------------------------------------- */
+
+.b-section
+	padding: $page-inner-space
+
+/* b-section
+/* ---------------------------------------END--- */
+
+
+/* b-txt-centered
+/* --------------------------------------------- */
+
+.b-txt-centered
+	text-align: center
+
+/* b-txt-centered
 /* ---------------------------------------END--- */
