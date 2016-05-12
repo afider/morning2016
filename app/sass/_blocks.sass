@@ -950,3 +950,70 @@ input:-ms-input-placeholder
 
 /* b-txt-centered
 /* ---------------------------------------END--- */
+
+
+/* b-news
+/* --------------------------------------------- */
+
+.b-news
+	$photo_dim: 80px
+
+	background: #fff
+	margin-bottom: $content_bot_space
+
+	&__item
+		display: table
+		width: 100%
+		color: inherit
+
+		&:active
+			@extend %active-state
+
+		+max-screen($mq_phone_portrait - 1)
+			display: block
+	
+	&__photo,
+	&__body
+		display: table-cell
+		vertical-align: top
+		height: $photo_dim
+
+		+max-screen($mq_phone_portrait - 1)
+			display: block
+			height: auto
+
+	&__photo
+		width: $photo_dim
+		border-bottom: 1px solid #fff
+		box-sizing: border-box
+
+		+max-screen($mq_phone_portrait - 1)
+			width: auto
+			padding-left: $page-inner-space
+			padding-top: 8px
+
+	&__img
+		display: block
+		max-width: $photo_dim
+
+	&__body
+		padding: 8px 10px 8px $page-inner-space
+		border-bottom: 1px solid $color_border
+		box-sizing: border-box
+
+	&__title
+		text-transform: uppercase
+		+rem(font-size, 11px)
+		height: 44px
+		overflow: hidden
+		+max-screen($mq_phone_portrait - 1)
+			height: auto
+
+	&__date
+		margin-top: 6px
+		+rem(font-size, 10px)
+		color: $text_color_light
+
+
+/* b-news
+/* ---------------------------------------END--- */
