@@ -644,6 +644,17 @@ input:-ms-input-placeholder {
 .b-button_color_cancel {
   background: #f75757;
 }
+.b-button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.b-button__icon_star {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: -2px;
+}
 
 /* b-button */
 /* ---------------------------------------END--- */
