@@ -1148,10 +1148,11 @@ input:-ms-input-placeholder
 /* --------------------------------------------- */
 
 .b-cr-list
+	$height: 60px
+
 	margin: 0 0 $content_bot_space 0
 	padding: 0
 	list-style-type: none
-	$height: 60px
 	background: #fff
 
 	&_space-bottom_none
@@ -1238,6 +1239,62 @@ input:-ms-input-placeholder
 
 
 /* b-cr-list
+/* ---------------------------------------END--- */
+
+
+/* b-poll-result
+/* --------------------------------------------- */
+
+.b-poll-result
+	$height: 60px
+	margin: 0 0 $content_bot_space 0
+	padding: 0
+	list-style-type: none
+	background: #fff
+
+	&_space-bottom_none
+		margin-bottom: 0
+
+	&__item
+		margin: 0
+		padding: 0
+		list-style-type: none
+		border-bottom: 1px solid $color_border
+		position: relative
+
+		&:first-child
+			border-top: 1px solid $color_border
+
+	&__body
+		display: flex
+		align-items: center
+		min-height: $height
+		line-height: 1.2
+
+	&__txt
+		width: 100%
+		padding: $page-inner-space
+
+	&__num
+		padding: $page-inner-space
+		width: 70px
+		font-weight: bold
+		color: $color_main
+		text-align: right
+
+	&__bar
+		position: absolute
+		left: 0
+		bottom: 0
+		height: 4px
+		background: $color_second
+
+	&_bar-color_light &__bar
+		background: $color_second_light
+			
+
+
+/* b-poll-result
 /* ---------------------------------------END--- */
 
 
