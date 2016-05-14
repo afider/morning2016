@@ -971,9 +971,17 @@ input:-ms-input-placeholder {
   transform: translate(-50%, -50%);
   color: #fff;
 }
+.b-main-teasers__icon_ural-tvorcheskiy {
+  width: 38px;
+  height: 34px;
+}
 .b-main-teasers__icon_ural-patriotichnyy {
   width: 29px;
   height: 42px;
+}
+.b-main-teasers__icon_ural-bezopasnyy {
+  width: 28px;
+  height: 35px;
 }
 .b-main-teasers__icon_ural-trudovoy {
   width: 34px;
@@ -994,6 +1002,22 @@ input:-ms-input-placeholder {
 .b-main-teasers__icon_ural-informatsionnyy {
   width: 36px;
   height: 31px;
+}
+.b-main-teasers__icon_ural-predpriimchivyy {
+  width: 36px;
+  height: 31px;
+}
+.b-main-teasers__icon_ural-mezhdunarodnyy {
+  width: 30px;
+  height: 37px;
+}
+.b-main-teasers__icon_ural-arkticheskiy {
+  width: 43px;
+  height: 41px;
+}
+.b-main-teasers__icon_ural-novatorskiy {
+  width: 37px;
+  height: 42px;
 }
 .b-main-teasers__h, .b-main-teasers__sub-h {
   text-transform: uppercase;
@@ -1068,6 +1092,10 @@ input:-ms-input-placeholder {
   width: 20px;
   height: 20px;
 }
+.b-list__icon_ural-tvorcheskiy {
+  width: 24px;
+  height: 21.47368px;
+}
 .b-list__icon_ural-patriotichnyy {
   width: 18px;
   height: 26.06897px;
@@ -1084,6 +1112,10 @@ input:-ms-input-placeholder {
   width: 21px;
   height: 26.09091px;
 }
+.b-list__icon_ural-bezopasnyy {
+  width: 16px;
+  height: 20px;
+}
 .b-list__icon_ural-istoricheskiy {
   width: 21px;
   height: 26.09091px;
@@ -1091,6 +1123,22 @@ input:-ms-input-placeholder {
 .b-list__icon_ural-informatsionnyy {
   width: 25px;
   height: 21.52778px;
+}
+.b-list__icon_ural-predpriimchivyy {
+  width: 22px;
+  height: 18.94444px;
+}
+.b-list__icon_ural-mezhdunarodnyy {
+  width: 19px;
+  height: 23.43333px;
+}
+.b-list__icon_ural-arkticheskiy {
+  width: 24px;
+  height: 22.88372px;
+}
+.b-list__icon_ural-novatorskiy {
+  width: 21px;
+  height: 23.83784px;
 }
 .b-list__item:last-child .b-list__h {
   border-bottom: none;
