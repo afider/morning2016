@@ -1,4 +1,85 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body>
+    <div id="svg-icons"></div>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+       
+        <div class="b-main-nav">
+          <ul class="b-main-nav__lst">
+            <li class="b-main-nav__item">
+              <a href="index.html" class="item-link close-panel b-main-nav__act">
+                Главная
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="cabinet.html" class="item-link close-panel b-main-nav__act">
+                Личный кабинет
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="forum-about.html" class="item-link close-panel b-main-nav__act">
+                О форуме
+              </a>
+            </li>
+            <li class="b-main-nav__item is-active">
+              <a href="areas.html" class="item-link close-panel b-main-nav__act">
+                Площадки
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="news.html" class="item-link close-panel b-main-nav__act">
+                Новости
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="experts.html" class="item-link close-panel b-main-nav__act">
+                Эксперты
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="programs.html" class="item-link close-panel b-main-nav__act">
+                Программы
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="morning24.html" class="item-link close-panel b-main-nav__act">
+                Утро 24
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+
+
+
+
+
+
 <!-- We don't need full layout here, because this page will be parsed with Ajax-->
 <!-- Top Navbar-->
 <div class="navbar">
@@ -10,13 +91,27 @@
         </svg>
       </a>
     </div>
-    <div class="center sliding">Эксперты</div>
+    <div class="center sliding">Эксперты площадок</div>
     <div class="right">
       <a href="#" class="link open-panel b-nav-button">
         <div class="b-nav-button__item b-nav-button__item_top"></div>
         <div class="b-nav-button__item b-nav-button__item_center"></div>
         <div class="b-nav-button__item b-nav-button__item_bottom"></div>
       </a>
+    </div>
+    <div class="subnavbar subnavbar-no-space">
+      <div class="b-tab-nav">
+        <a href="experts-federal.html" class="item-link b-tab-nav__item">
+          <div class="b-tab-nav__text">
+            Федеральные эксперты
+          </div>
+        </a>
+        <a href="experts.html" class="item-link b-tab-nav__item active">
+          <div class="b-tab-nav__text">
+            Эксперты площадок
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -28,93 +123,103 @@
       <div class="content-block">
         <div class="content-block-inner">
           
-          <div class="b-list">
-            <ul class="b-list__lst">
-              <li class="b-list__item">
-                <a href="experts-detail.html" class="b-list__act item-link">
-                  <div class="b-list__img">
-                    <div class="b-list__circle">
-                      <img src="img/avatars/avatar-1.jpg" height="80" width="80" alt="Анатолий Александрович Вассерман" class="b-list__avatar">
+          <div class="page-content">
+
+            <div class="b-list">
+              <ul class="b-list__lst">
+                <li class="b-list__item">
+                  <a href="experts-detail.html" class="b-list__act item-link">
+                    <div class="b-list__img">
+                      <div class="b-list__circle">
+                        <img src="img/avatars/avatar-1.jpg" height="80" width="80" alt="Анатолий Александрович Вассерман" class="b-list__avatar">
+                      </div>
                     </div>
-                  </div>
-                  <div class="b-list__h">
-                    <div class="b-list__body">
-                      Анатолий Александрович Вассерман 
+                    <div class="b-list__h">
+                      <div class="b-list__body">
+                        Анатолий Александрович Вассерман 
+                        <div class="b-list__area-h">урал патриотичный</div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li class="b-list__item">
-                <a href="experts-detail.html" class="b-list__act item-link">
-                  <div class="b-list__img">
-                    <div class="b-list__circle">
-                      <img src="img/avatars/avatar-2.jpg" height="80" width="80" alt="Тина ивановна бережная" class="b-list__avatar">
+                  </a>
+                </li>
+                <li class="b-list__item">
+                  <a href="experts-detail.html" class="b-list__act item-link">
+                    <div class="b-list__img">
+                      <div class="b-list__circle">
+                        <img src="img/avatars/avatar-2.jpg" height="80" width="80" alt="Тина ивановна бережная" class="b-list__avatar">
+                      </div>
                     </div>
-                  </div>
-                  <div class="b-list__h">
-                    <div class="b-list__body">
-                      Тина ивановна бережная 
+                    <div class="b-list__h">
+                      <div class="b-list__body">
+                        Тина ивановна бережная 
+                        <div class="b-list__area-h">урал патриотичный</div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li class="b-list__item">
-                <a href="experts-detail.html" class="b-list__act item-link">
-                  <div class="b-list__img">
-                    <div class="b-list__circle">
-                      <img src="img/avatars/avatar-3.jpg" height="80" width="80" alt="Александра Игоревна Кочетова" class="b-list__avatar">
+                  </a>
+                </li>
+                <li class="b-list__item">
+                  <a href="experts-detail.html" class="b-list__act item-link">
+                    <div class="b-list__img">
+                      <div class="b-list__circle">
+                        <img src="img/avatars/avatar-3.jpg" height="80" width="80" alt="Александра Игоревна Кочетова" class="b-list__avatar">
+                      </div>
                     </div>
-                  </div>
-                  <div class="b-list__h">
-                    <div class="b-list__body">
-                      Александра Игоревна Кочетова 
+                    <div class="b-list__h">
+                      <div class="b-list__body">
+                        Александра Игоревна Кочетова 
+                        <div class="b-list__area-h">урал патриотичный</div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li class="b-list__item">
-                <a href="experts-detail.html" class="b-list__act item-link">
-                  <div class="b-list__img">
-                    <div class="b-list__circle">
-                      <img src="img/avatars/avatar-4.jpg" height="80" width="80" alt="Петр Сергеевич Емельянов" class="b-list__avatar">
+                  </a>
+                </li>
+                <li class="b-list__item">
+                  <a href="experts-detail.html" class="b-list__act item-link">
+                    <div class="b-list__img">
+                      <div class="b-list__circle">
+                        <img src="img/avatars/avatar-4.jpg" height="80" width="80" alt="Петр Сергеевич Емельянов" class="b-list__avatar">
+                      </div>
                     </div>
-                  </div>
-                  <div class="b-list__h">
-                    <div class="b-list__body">
-                      Петр Сергеевич Емельянов 
+                    <div class="b-list__h">
+                      <div class="b-list__body">
+                        Петр Сергеевич Емельянов 
+                        <div class="b-list__area-h">урал патриотичный</div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li class="b-list__item">
-                <a href="experts-detail.html" class="b-list__act item-link">
-                  <div class="b-list__img">
-                    <div class="b-list__circle">
-                      <img src="img/avatars/avatar-5.jpg" height="80" width="80" alt="Тина ивановна бережная" class="b-list__avatar">
+                  </a>
+                </li>
+                <li class="b-list__item">
+                  <a href="experts-detail.html" class="b-list__act item-link">
+                    <div class="b-list__img">
+                      <div class="b-list__circle">
+                        <img src="img/avatars/avatar-5.jpg" height="80" width="80" alt="Тина ивановна бережная" class="b-list__avatar">
+                      </div>
                     </div>
-                  </div>
-                  <div class="b-list__h">
-                    <div class="b-list__body">
-                      Тина ивановна бережная 
+                    <div class="b-list__h">
+                      <div class="b-list__body">
+                        Тина ивановна бережная 
+                        <div class="b-list__area-h">урал патриотичный</div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li class="b-list__item">
-                <a href="experts-detail.html" class="b-list__act item-link">
-                  <div class="b-list__img">
-                    <div class="b-list__circle">
-                      <img src="img/avatars/avatar-6.jpg" height="80" width="80" alt="Варвара Васильевна штырь" class="b-list__avatar">
+                  </a>
+                </li>
+                <li class="b-list__item">
+                  <a href="experts-detail.html" class="b-list__act item-link">
+                    <div class="b-list__img">
+                      <div class="b-list__circle">
+                        <img src="img/avatars/avatar-6.jpg" height="80" width="80" alt="Варвара Васильевна штырь" class="b-list__avatar">
+                      </div>
                     </div>
-                  </div>
-                  <div class="b-list__h">
-                    <div class="b-list__body">
-                      Варвара Васильевна штырь 
+                    <div class="b-list__h">
+                      <div class="b-list__body">
+                        Варвара Васильевна штырь 
+                        <div class="b-list__area-h">урал патриотичный</div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
           </div>
 
         </div>
@@ -170,3 +275,22 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+     </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/svg.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+  </body>
+</html>

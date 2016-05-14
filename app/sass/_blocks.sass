@@ -53,6 +53,9 @@ input:-ms-input-placeholder
 		&:last-child
 			padding-left: 8px
 
+	&__button
+		padding: 0 14px
+
 /* b-sub-header
 /* ---------------------------------------END--- */
 
@@ -74,25 +77,29 @@ input:-ms-input-placeholder
 	-moz-appearance: none
 	-ms-appearance: none
 	appearance: none
-	padding: 0 15px
+	padding: 0 24px
 	margin: 0
 	
 	white-space: nowrap
 	position: relative
 	overflow: hidden
-	+rem(font-size, 12px)
+	+rem(font-size, 16px)
 	font-family: inherit
 	cursor: pointer
 	outline: 0
 
 	&_style_bordered
 		border: 2px solid #fff
+		line-height: 29px
 
 	&_width_fluid
 		display: block
 
 	&_color_cancel
 		background: $color_imp_light
+
+	&_font-size_small
+		+rem(font-size, 12px)
 
 	&:active
 		@extend %active-state
@@ -693,6 +700,9 @@ input:-ms-input-placeholder
 		+new-svg-h($new_w: 7px, $old_w: 11px, $old_h: 20px)
 		color: $color_border
 
+	&__area-h
+		color: $color_main
+		+rem(font-size, 10px)
 
 /* b-list
 /* ---------------------------------------END--- */
@@ -1003,6 +1013,13 @@ input:-ms-input-placeholder
 .b-section
 	padding: $page-inner-space
 
+	&_space_only-sides
+		padding-top: 0
+		padding-bottom: 0
+
+	&_bg
+		background: #fff
+
 /* b-section
 /* ---------------------------------------END--- */
 
@@ -1124,4 +1141,132 @@ input:-ms-input-placeholder
 
 	
 /* table
+/* ---------------------------------------END--- */
+
+
+/* b-cr-list
+/* --------------------------------------------- */
+
+.b-cr-list
+	margin: 0 0 $content_bot_space 0
+	padding: 0
+	list-style-type: none
+	$height: 60px
+	background: #fff
+
+	&_space-bottom_none
+		margin-bottom: 0
+		
+	
+	&__item
+		margin: 0
+		padding: 0
+		list-style-type: none
+		&:first-child
+			border-top: 1px solid $color_border
+		
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		visibility: hidden
+
+	&__input[type="radio"] + &__label
+		&:after
+			border-radius: 50%
+
+	&__input[type="checkbox"] + &__label
+		&:after
+			border-radius: 3px
+
+	&__input:checked + &__label
+		
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 2px
+			bottom: 0
+			background: $color_second
+
+		&:after
+			background: $color_second
+			border-color: $color_second
+
+	&__label
+		display: flex
+		align-items: center
+		min-height: $height
+		cursor: pointer
+		border-bottom: 1px solid $color_border
+		position: relative
+		padding: $page-inner-space $page-inner-space $page-inner-space $page-inner-space*2+18px
+		box-sizing: border-box
+		line-height: 1.2
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			margin-top: -9px
+			left: 10px
+			width: 18px
+			height: 18px
+			border: 1px solid $color_border
+
+	&__txt
+		display: inline-block
+		position: relative
+		top: 3px
+	
+	&__input:checked + &__label &__icon
+		display: block
+
+	&__icon
+		display: none
+		position: absolute
+		top: 50%
+		left: $page-inner-space
+		@include translate(0, -50%)
+		+new-svg-h($new_w: 12px, $old_w: 20px, $old_h: 14px)
+		color: #fff
+		z-index: 1
+	
+
+
+/* b-cr-list
+/* ---------------------------------------END--- */
+
+
+/* b-no-space
+/* --------------------------------------------- */
+
+.b-no-space
+	margin: 0
+	padding: 0
+
+/* b-no-space
+/* ---------------------------------------END--- */
+
+
+/* b-main-h
+/* --------------------------------------------- */
+
+.b-main-h
+	line-height: 1
+	margin: 0
+	padding: 10px $page-inner-space
+	font-weight: bold
+	+rem(font-size, 18px)
+	color: #fff
+	background: $color_main
+	min-height: $navbar_h
+	display: flex
+	align-items: center
+	box-sizing: border-box
+
+/* b-main-h
 /* ---------------------------------------END--- */
