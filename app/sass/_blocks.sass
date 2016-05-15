@@ -72,6 +72,7 @@ input:-ms-input-placeholder
 	border-radius: 16px
 	line-height: 32px
 	height: 32px
+	min-width: 120px
 	box-sizing: border-box
 	-webkit-appearance: none
 	-moz-appearance: none
@@ -91,12 +92,18 @@ input:-ms-input-placeholder
 	&_style_bordered
 		border: 2px solid #fff
 		line-height: 29px
+		background: none !important
+		color: $text_color
 
 	&_width_fluid
 		display: block
 
 	&_color_cancel
 		background: $color_imp_light
+		border-color: $color_imp_light
+
+	&_color_cancel.b-button_style_bordered
+		color: $color_imp_light !important
 
 	&_font-size_small
 		+rem(font-size, 12px)
@@ -1326,4 +1333,106 @@ input:-ms-input-placeholder
 	box-sizing: border-box
 
 /* b-main-h
+/* ---------------------------------------END--- */
+
+
+/* b-filter-ctrl
+/* --------------------------------------------- */
+
+.b-filter-ctrl
+	$filter_dim: 16px
+	width: $filter_dim
+	height: $filter_dim
+	color: #fff
+
+	&__icon
+		width: $filter_dim
+		height: $filter_dim
+
+/* b-filter-ctrl
+/* ---------------------------------------END--- */
+
+
+/* b-modal
+/* --------------------------------------------- */
+
+.b-modal
+	
+	background: none !important
+	width: 100% !important
+	margin-top: 0 !important
+	margin-left: 0 !important
+	display: block !important
+	transform: translate(-50%, -50%) !important
+	-webkit-font-smoothing: subpixel-antialiased
+	-webkit-transform: translateZ(0) scale(1.0, 1.0)
+	max-width: 500px
+	
+	&__inner
+		background: #fff !important
+		margin: $page-inner-space
+		border-radius: 5px !important
+
+	&__body
+		padding: $page-inner-space
+
+	&__content
+		text-align: left
+
+	&__title
+		border-radius: 5px 5px 0 0
+		text-align: left
+		background: $color_main
+		@extend %font-light
+		color: #fff
+		margin: 0
+		padding: $page-inner-space
+		padding-right: 44px
+		position: relative
+		line-height: 1.2
+
+	&__buttons
+		padding-top: $page-inner-space + 5px
+		text-align: center
+
+		
+	&__button
+		border-radius: 16px !important
+		width: auto !important
+		margin-right: $page-inner-space/2
+		margin-left: $page-inner-space/2
+		&:after
+			display: none
+
+	&__close
+		cursor: pointer
+		position: absolute
+		right: -$page-inner-space
+		top: 50%
+		@include translate(-50%, -50%)
+		width: 44px
+		height: 44px
+
+		&:after,
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			width: 20px
+			height: 1px
+			background: #fff
+
+		&:after
+			transform: rotate(45deg)
+			left: 10px
+			
+		&:before
+			transform: rotate(-45deg)
+			left: 11px
+
+			
+
+
+/* b-modal
 /* ---------------------------------------END--- */

@@ -1,6 +1,47 @@
+/*
+
+<div class="modal b-modal {{#unless buttons}}modal-no-buttons{{/unless}}">
+  <div class="b-modal__inner">
+    {{#if title}}
+      <div class="b-modal__title">
+          {{title}}
+          {{#if closeButton}}
+            <div class="b-modal__close">
+                <div class="b-close-ctrl"></div>
+            </div>
+          {{/if}}
+      </div>
+    {{/if}}
+    <div class="b-modal__body">
+        {{#if text}}
+           <div class="b-modal__content">{{text}}</div>
+        {{/if}}
+        {{#if afterText}}
+          {{afterText}}
+        {{/if}}
+        {{#if buttons}}
+          <div class="b-modal__buttons">
+            {{#each buttons}}
+              <div class="modal-button b-modal__button b-button {{#if cancel}}b-button_style_bordered b-button_color_cancel{{/if}}">{{text}}</div>
+            {{/each}}
+          </div>
+        {{/if}}
+    </div>
+  </div>
+</div>
+
+
+*/
+
+ 
+
+
+
 // Initialize your app
 var myApp = new Framework7({
-    cache: false
+    cache: false,
+    modalTitle: 'Утро 2016',
+    modalTemplate: '<div class="modal b-modal {{#unless buttons}}modal-no-buttons{{/unless}}"> <div class="b-modal__inner"> {{#if title}} <div class="b-modal__title"> {{title}} {{#if closeButton}} <div class="b-modal__close"> <div class="b-close-ctrl"></div> </div> {{/if}} </div> {{/if}} <div class="b-modal__body"> {{#if text}} <div class="b-modal__content">{{text}}</div> {{/if}} {{#if afterText}} {{afterText}} {{/if}} {{#if buttons}} <div class="b-modal__buttons"> {{#each buttons}} <div class="modal-button b-modal__button b-button {{#if cancel}}b-button_style_bordered b-button_color_cancel{{/if}}">{{text}}</div> {{/each}} </div> {{/if}} </div> </div></div>'
 });
 
 // Export selectors engine
@@ -17,25 +58,52 @@ var mainView = myApp.addView('.view-main', {
 });
 
 // Callbacks to run specific code for specific pages, for example for About page:
-myApp.onPageInit('about', function (page) {
-    // run createContentPage func after link was clicked
-    $$('.create-page').on('click', function () {
-        createContentPage();
-    });
-});
-
 myApp.onPageInit('*', function (page) {
-  console.log(page.name + ' initialized');
-  var body = $$('body');
-  body.attr('class', '').addClass('layout_type_' + page.name);
+    // run createContentPage func after link was clicked
+    $$('.open-filter').on('click', function () {
+      var modal = myApp.modal({
+        title: 'Выбрать площадки',
+        text: 'Урал патриотичный',
+        closeButton: true,
+        buttons: [
+          {
+            text: 'Отменить',
+            cancel: true
+          },
+          {
+            text: 'Применить',
+            bold: true,
+            onClick: function () {
+              myApp.alert('Отфильтровано!')
+            }
+          },
+        ]
+      })
+    });
+
 });
 
-$$(document).on('pageInit', function (page) {
-  console.log(page.name + ' initialized');
-  var body = $$('body');
-  body.attr('class', '').addClass('layout_type_' + $$('.view-main').data('page'));
-});
 
+$$('.open-filter').on('click', function () {
+  var modal = myApp.modal({
+    title: 'Выбрать площадки',
+    text: 'Урал патриотичный',
+    closeButton: true,
+    buttons: [
+      {
+        text: 'Отменить',
+        cancel: true
+      },
+      {
+        text: 'Применить',
+        bold: true,
+        onClick: function () {
+          myApp.alert('Отфильтровано!')
+        }
+      },
+    ]
+  })
+});
 
 // Generate dynamic page
 var dynamicPageIndex = 0;

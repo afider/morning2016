@@ -10,8 +10,16 @@
 .subnavbar-no-space
 	padding: 0 !important
 
-.navbar
+.navbar .navbar-inner
 	height: $navbar_h
+
+.navbar a.link, .subnavbar a.link, .toolbar a.link
+	height: $navbar_h
+	line-height: $navbar_h
+
+.navbar .left a+a, .navbar .right a+a
+	margin-left: 10px
+
 
 .navbar-inner,
 .subnavbar
@@ -92,3 +100,8 @@
 	-webkit-flex-shrink: 0
 	flex-shrink: 0
 	padding: 0 16px
+
+
+html:not(.watch-active-state) .modal-button:active,
+.modal-button.active-state
+	
