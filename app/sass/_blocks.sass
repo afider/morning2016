@@ -723,18 +723,22 @@ input:-ms-input-placeholder
 
 	&__photo
 		display: block
+
+		&_darken
+			filter: grayscale(1)
 		
 	&__h
 		background: $color_main
 		padding: $page-inner-space
 		+rem(font-size, 20px)
 		color: #fff
+		margin-bottom: $page-inner-space
 
 	&__legend
 		border-bottom: 1px solid $color_border
 		margin-left: $page-inner-space
 		margin-bottom: $page-inner-space
-		padding: $page-inner-space $page-inner-space $page-inner-space 0
+		padding: 0 $page-inner-space $page-inner-space 0
 		@extend %font-light
 
 	&__legend-body
@@ -1172,6 +1176,10 @@ input:-ms-input-placeholder
 		list-style-type: none
 		&:first-child
 			border-top: 1px solid $color_border
+
+	&_top-border_none &__item
+		&:first-child
+			border-top: none
 		
 	&__input
 		position: absolute
@@ -1188,7 +1196,6 @@ input:-ms-input-placeholder
 			border-radius: 3px
 
 	&__input:checked + &__label
-		
 		&:before
 			content: ''
 			display: block
@@ -1203,6 +1210,31 @@ input:-ms-input-placeholder
 			background: $color_second
 			border-color: $color_second
 
+	&_style_plus-minus &__label
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: auto
+			right: 10px
+			width: 1px
+			height: 13px
+			top: 50%
+			margin-top: -6px
+			background: $color_main
+
+	&_style_plus-minus &__input:checked + &__label
+		&:before
+			display: none
+
+	&_style_plus-minus &__input:checked + &__label
+		color: $color_main
+		font-weight: bold
+
+	&_style_plus-minus &__label
+		padding: $page-inner-space $page-inner-space+18px $page-inner-space 0
+		
 	&__label
 		display: flex
 		align-items: center
@@ -1224,6 +1256,21 @@ input:-ms-input-placeholder
 			width: 18px
 			height: 18px
 			border: 1px solid $color_border
+	
+	&_style_plus-minus &__input:checked + &__label
+		&:after
+			background: #fff
+
+	&_style_plus-minus &__label
+		&:after
+			left: auto
+			margin-top: 0
+			right: 4px
+			width: 13px
+			height: 1px
+			background: $color_main
+			z-index: 1
+			border: none
 
 	&__txt
 		display: inline-block
@@ -1234,7 +1281,6 @@ input:-ms-input-placeholder
 		display: block
 
 	&__icon
-		display: none
 		position: absolute
 		top: 50%
 		left: $page-inner-space
@@ -1242,7 +1288,18 @@ input:-ms-input-placeholder
 		+new-svg-h($new_w: 12px, $old_w: 20px, $old_h: 14px)
 		color: #fff
 		z-index: 1
-	
+
+	&_style_plus-minus &__icon
+		left: auto
+		right: 0
+		width: 19px
+		height: 19px
+		border: 1px solid $color_main
+		border-radius: 50%
+
+	&_style_plus-minus &__input:checked + &__label &__icon
+		border-color: $color_imp_light
+		background: $color_imp_light
 
 
 /* b-cr-list

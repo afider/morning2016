@@ -1252,18 +1252,22 @@ input:-ms-input-placeholder {
 .b-person__photo {
   display: block;
 }
+.b-person__photo_darken {
+  filter: grayscale(1);
+}
 .b-person__h {
   background: #31b5e8;
   padding: 15px;
   font-size: 20px;
   font-size: 2rem;
   color: #fff;
+  margin-bottom: 15px;
 }
 .b-person__legend {
   border-bottom: 1px solid #d6d6d6;
   margin-left: 15px;
   margin-bottom: 15px;
-  padding: 15px 15px 15px 0;
+  padding: 0 15px 15px 0;
 }
 .b-person__legend-body {
   text-transform: uppercase;
@@ -1681,6 +1685,9 @@ input:-ms-input-placeholder {
 .b-cr-list__item:first-child {
   border-top: 1px solid #d6d6d6;
 }
+.b-cr-list_top-border_none .b-cr-list__item:first-child {
+  border-top: none;
+}
 .b-cr-list__input {
   position: absolute;
   top: 0;
@@ -1707,6 +1714,29 @@ input:-ms-input-placeholder {
   background: #f8ae19;
   border-color: #f8ae19;
 }
+.b-cr-list_style_plus-minus .b-cr-list__label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 10px;
+  width: 1px;
+  height: 13px;
+  top: 50%;
+  margin-top: -6px;
+  background: #31b5e8;
+}
+.b-cr-list_style_plus-minus .b-cr-list__input:checked + .b-cr-list__label:before {
+  display: none;
+}
+.b-cr-list_style_plus-minus .b-cr-list__input:checked + .b-cr-list__label {
+  color: #31b5e8;
+  font-weight: bold;
+}
+.b-cr-list_style_plus-minus .b-cr-list__label {
+  padding: 15px 33px 15px 0;
+}
 .b-cr-list__label {
   display: flex;
   align-items: center;
@@ -1729,6 +1759,19 @@ input:-ms-input-placeholder {
   height: 18px;
   border: 1px solid #d6d6d6;
 }
+.b-cr-list_style_plus-minus .b-cr-list__input:checked + .b-cr-list__label:after {
+  background: #fff;
+}
+.b-cr-list_style_plus-minus .b-cr-list__label:after {
+  left: auto;
+  margin-top: 0;
+  right: 4px;
+  width: 13px;
+  height: 1px;
+  background: #31b5e8;
+  z-index: 1;
+  border: none;
+}
 .b-cr-list__txt {
   display: inline-block;
   position: relative;
@@ -1738,7 +1781,6 @@ input:-ms-input-placeholder {
   display: block;
 }
 .b-cr-list__icon {
-  display: none;
   position: absolute;
   top: 50%;
   left: 15px;
@@ -1750,6 +1792,18 @@ input:-ms-input-placeholder {
   height: 8.4px;
   color: #fff;
   z-index: 1;
+}
+.b-cr-list_style_plus-minus .b-cr-list__icon {
+  left: auto;
+  right: 0;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #31b5e8;
+  border-radius: 50%;
+}
+.b-cr-list_style_plus-minus .b-cr-list__input:checked + .b-cr-list__label .b-cr-list__icon {
+  border-color: #f75757;
+  background: #f75757;
 }
 
 /* b-cr-list */
