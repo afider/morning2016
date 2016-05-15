@@ -1,3 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body>
+    <div id="svg-icons"></div>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+       
+        <div class="b-main-nav">
+          <ul class="b-main-nav__lst">
+            <li class="b-main-nav__item">
+              <a href="index.html" class="item-link close-panel b-main-nav__act">
+                Главная
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="cabinet.html" class="item-link close-panel b-main-nav__act">
+                Личный кабинет
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="forum-about.html" class="item-link close-panel b-main-nav__act">
+                О форуме
+              </a>
+            </li>
+            <li class="b-main-nav__item is-active">
+              <a href="areas.html" class="item-link close-panel b-main-nav__act">
+                Площадки
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="news.html" class="item-link close-panel b-main-nav__act">
+                Новости
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="experts.html" class="item-link close-panel b-main-nav__act">
+                Эксперты
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="programs.html" class="item-link close-panel b-main-nav__act">
+                Программы
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="morning24.html" class="item-link close-panel b-main-nav__act">
+                Утро 24
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+
+
+
+
+
 
 <!-- We don't need full layout here, because this page will be parsed with Ajax-->
 <!-- Top Navbar-->
@@ -39,14 +119,14 @@
 </div>
 <div class="pages">
   <!-- Page, data-page contains page name-->
-  <div data-page="area-labor" class="page page-no-space">
+  <div data-page="area-labor" class="page b-page-bg page-no-space">
     <!-- Scrollable page content-->
     <div class="page-content">
       <div class="content-block">
         <div class="content-block-inner">
           <div class="tabs b-tabs">
             <div id="tab1" class="page-content tab b-tabs__item">
-              <div class="b-tabs__content">
+              <div class="b-tabs__content b-tabs__content_page-bg">
 
                 <p><b>Цель смены:</b> воспитание трудовой культуры, любви к своей профессии, уважительного отношения к труду.</p>
                 <p><b>Концепция смены:</b> смена включает в себя следующие тематические блоки: «Ценность труда», «Трудовые подвиги России», «Трудовая молодость России», «Терпение и труд все перетрут!» Каждое направление будет разбито на 2 блока: лекционный и практический. В рамках практического блока – тренинги, деловые игры, обмен опытом.</p>
@@ -156,7 +236,7 @@
               </div>
             </div>
             <div id="tab3" class="page-content tab b-tabs__item">
-              <div class="b-tabs__content b-tabs__content_nospace">
+              <div class="b-tabs__content">
 
                 <div class="b-contacts">
                   <ul class="b-contacts__lst">
@@ -270,3 +350,22 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+     </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/svg.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+  </body>
+</html>

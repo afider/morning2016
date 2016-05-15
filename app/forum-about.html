@@ -1,3 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body>
+    <div id="svg-icons"></div>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+       
+        <div class="b-main-nav">
+          <ul class="b-main-nav__lst">
+            <li class="b-main-nav__item">
+              <a href="index.html" class="item-link close-panel b-main-nav__act">
+                Главная
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="cabinet.html" class="item-link close-panel b-main-nav__act">
+                Личный кабинет
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="forum-about.html" class="item-link close-panel b-main-nav__act">
+                О форуме
+              </a>
+            </li>
+            <li class="b-main-nav__item is-active">
+              <a href="areas.html" class="item-link close-panel b-main-nav__act">
+                Площадки
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="news.html" class="item-link close-panel b-main-nav__act">
+                Новости
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="experts.html" class="item-link close-panel b-main-nav__act">
+                Эксперты
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="programs.html" class="item-link close-panel b-main-nav__act">
+                Программы
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="morning24.html" class="item-link close-panel b-main-nav__act">
+                Утро 24
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+
+
+
+
+
 
 <!-- We don't need full layout here, because this page will be parsed with Ajax-->
 <!-- Top Navbar-->
@@ -18,21 +98,234 @@
         <div class="b-nav-button__item b-nav-button__item_bottom"></div>
       </a>
     </div>
-  </div>
-</div>
-<div class="pages">
-  <!-- Page, data-page contains page name-->
-  <div data-page="forum-about" class="page">
-    <!-- Scrollable page content-->
-    <div class="page-content">
-      <div class="content-block">
-        <div class="content-block-inner">
-          <p>О форуме</p>
-          <p>Go <a href="#" class="back">back</a> or click  <a href="#" class="create-page">here </a>to create dynamic page.</p>
-          <p>Mauris posuere sit amet metus id venenatis. Ut ante dolor, tempor nec commodo rutrum, varius at sem. Nullam ac nisi non neque ornare pretium. Nulla mauris mauris, consequat et elementum sit amet, egestas sed orci. In hac habitasse platea dictumst.</p>
-          <p>Fusce eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis. Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel et nisi. Aenean aliquet, felis quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu metus elit. Ut vel diam dolor.</p>
-        </div>
+    <div class="subnavbar subnavbar-no-space">
+      <div class="b-tab-nav b-tab-nav_content-align_left">
+        <a href="#tab1" class="tab-link b-tab-nav__item">
+          <div class="b-tab-nav__text">
+            Концепция проекта
+          </div>
+        </a>
+        <a href="#tab2" class="tab-link b-tab-nav__item">
+          <div class="b-tab-nav__text">
+            Место проведения
+          </div>
+        </a>
+        <a href="#tab3" class="tab-link b-tab-nav__item active">
+          <div class="b-tab-nav__text">
+            Организаторы
+          </div>
+        </a>
+        <a href="#tab4" class="tab-link b-tab-nav__item">
+          <div class="b-tab-nav__text">
+            Гости
+          </div>
+        </a>
+        <a href="#tab5" class="tab-link b-tab-nav__item">
+          <div class="b-tab-nav__text">
+            Обращения
+          </div>
+        </a>
       </div>
     </div>
   </div>
 </div>
+<div class="pages navbar-through">
+  <!-- Page, data-page contains page name-->
+  <div data-page="forum-about" class="page page b-page-bg page-no-space">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+          
+          <div class="tabs b-tabs">
+            <div id="tab1" class="page-content tab b-tabs__item">
+              <div class="b-tabs__content b-tabs__content_page-bg">
+
+                <p><b>Пятый форум молодежи Уральского федерального округа «УТРО-2015» приурочен к знаменательной дате российской истории - 70-летию Победы.</b></p>
+
+                <p>Форум  пройдет в две смены: с 20 по 25 июня и с 25 по 30 июня 2015 года. Территорией проведения мероприятия станет Тюменское президентское кадетское училище.</p>
+
+                <p>Форум «УТРО» проводится в рамках поручения президента РФ Владимира Путина, под эгидой его полномочного представителя в УрФО и при поддержке органов исполнительной власти регионов округа. Участники прибудут в Тюмень в составе делегаций автономных округов и областей, расположенных в Уральском федеральном округе: Курганской, Свердловской, Тюменской и Челябинской области, Ханты-Мансийского и Ямало-Ненецкого автономного округа. Всего форум соберет 1500 социально-активных и талантливых молодых людей в возрасте от 18 до 35 лет (в отдельных случаях по предложениям организаторов в состав делегации могут войти молодые люди от 16 лет).</p>
+
+              </div>
+            </div>
+            <div id="tab2" class="page-content tab b-tabs__item">
+              <div class="b-tabs__content b-tabs__content_page-bg">
+
+                <h2>Место проведения</h2>
+
+                <p>Форум  пройдет в две смены: с 20 по 25 июня и с 25 по 30 июня 2015 года. Территорией проведения мероприятия станет Тюменское президентское кадетское училище.</p>
+
+                <p>Форум «УТРО» проводится в рамках поручения президента РФ Владимира Путина, под эгидой его полномочного представителя в УрФО и при поддержке органов исполнительной власти регионов округа. Участники прибудут в Тюмень в составе делегаций автономных округов и областей, расположенных в Уральском федеральном округе: Курганской, Свердловской, Тюменской и Челябинской области, Ханты-Мансийского и Ямало-Ненецкого автономного округа. Всего форум соберет 1500 социально-активных и талантливых молодых людей в возрасте от 18 до 35 лет (в отдельных случаях по предложениям организаторов в состав делегации могут войти молодые люди от 16 лет).</p>
+
+              </div>
+            </div>
+            <div id="tab3" class="page-content tab b-tabs__item active">
+              <div class="b-tabs__content b-tabs__content_nospace">
+                
+                <div class="b-section">
+                  <h2 class="b-section-h">Управляющие</h2>
+                </div>
+
+                <div class="b-contacts">
+                  <ul class="b-contacts__lst">
+                    <li class="b-contacts__item">
+                      <div class="b-contacts__photo">
+                        <img src="img/contacts/contacts-1.jpg" height="180" width="180" alt="Татаринцев Владислав" class="b-contacts__img">
+                      </div>
+                      <div class="b-contacts__body">
+                        <div class="b-contacts__name">Татаринцев Владислав</div>
+
+                        <div class="b-contacts__desc">Специалист по взаимодействию с органами исполнительной власти</div>
+                        <div class="b-contacts__phone">
+                          <svg class="b-contacts__phone-icon">
+                            <use xlink:href="#icon_at-phpne"></use>
+                          </svg>
+                          <div class="b-contacts__phone-num">+7 (3452) 690-609</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="b-contacts__item">
+                      <div class="b-contacts__photo">
+                        <img src="img/contacts/contacts-2.jpg" height="180" width="180" alt="БАБИНА МАРИНА" class="b-contacts__img">
+                      </div>
+                      <div class="b-contacts__body">
+                        <div class="b-contacts__name">БАБИНА МАРИНА</div>
+
+                        <div class="b-contacts__desc">Специалист по работе со СМИ</div>
+                        <div class="b-contacts__phone">
+                          <svg class="b-contacts__phone-icon">
+                            <use xlink:href="#icon_at-phpne"></use>
+                          </svg>
+                          <div class="b-contacts__phone-num">+7 (3452) 690-609</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="b-section">
+                  <h2 class="b-section-h">Заведующие</h2>
+                </div>
+
+                <div class="b-contacts">
+                  <ul class="b-contacts__lst">
+                    <li class="b-contacts__item">
+                      <div class="b-contacts__photo">
+                        <img src="img/contacts/contacts-3.jpg" height="180" width="180" alt="Татаринцева екатерина" class="b-contacts__img">
+                      </div>
+                      <div class="b-contacts__body">
+                        <div class="b-contacts__name">Татаринцева екатерина</div>
+
+                        <div class="b-contacts__desc">Специалист по взаимодействию с органами исполнительной власти</div>
+                        <div class="b-contacts__phone">
+                          <svg class="b-contacts__phone-icon">
+                            <use xlink:href="#icon_at-phpne"></use>
+                          </svg>
+                          <div class="b-contacts__phone-num">+7 (3452) 690-609</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+            <div id="tab4" class="page-content tab b-tabs__item">
+              <div class="b-tabs__content b-tabs__content_page-bg">
+
+                <h2>Гости</h2>
+
+                <p>Форум  пройдет в две смены: с 20 по 25 июня и с 25 по 30 июня 2015 года. Территорией проведения мероприятия станет Тюменское президентское кадетское училище.</p>
+
+                <p>Форум «УТРО» проводится в рамках поручения президента РФ Владимира Путина, под эгидой его полномочного представителя в УрФО и при поддержке органов исполнительной власти регионов округа. Участники прибудут в Тюмень в составе делегаций автономных округов и областей, расположенных в Уральском федеральном округе: Курганской, Свердловской, Тюменской и Челябинской области, Ханты-Мансийского и Ямало-Ненецкого автономного округа. Всего форум соберет 1500 социально-активных и талантливых молодых людей в возрасте от 18 до 35 лет (в отдельных случаях по предложениям организаторов в состав делегации могут войти молодые люди от 16 лет).</p>
+
+              </div>
+            </div>
+            <div id="tab5" class="page-content tab b-tabs__item">
+              <div class="b-tabs__content b-tabs__content_page-bg">
+
+                <h2>Обращения</h2>
+
+                <p>Форум  пройдет в две смены: с 20 по 25 июня и с 25 по 30 июня 2015 года. Территорией проведения мероприятия станет Тюменское президентское кадетское училище.</p>
+
+                <p>Форум «УТРО» проводится в рамках поручения президента РФ Владимира Путина, под эгидой его полномочного представителя в УрФО и при поддержке органов исполнительной власти регионов округа. Участники прибудут в Тюмень в составе делегаций автономных округов и областей, расположенных в Уральском федеральном округе: Курганской, Свердловской, Тюменской и Челябинской области, Ханты-Мансийского и Ямало-Ненецкого автономного округа. Всего форум соберет 1500 социально-активных и талантливых молодых людей в возрасте от 18 до 35 лет (в отдельных случаях по предложениям организаторов в состав делегации могут войти молодые люди от 16 лет).</p>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="toolbar">
+        <div class="toolbar-inner">
+            <div class="b-footer-nav">
+              <div class="b-footer-nav__item">
+                <a href="areas.html" class="b-feedback-button item-link">
+                  <div class="b-feedback-button__button">
+                    <div class="b-feedback-button__img">
+                      <svg class="b-feedback-button__icon">
+                        <use xlink:href="#icon_phone"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="b-footer-nav__item">
+                <a href="schedule.html" class="b-footer-button item-link">
+                  <svg class="b-footer-button__icon b-footer-button__icon_calendar">
+                    <use xlink:href="#icon_calendar"></use>
+                  </svg>
+                </a>
+              </div> 
+              <div class="b-footer-nav__item">
+                <a href="map.html" class="b-footer-button item-link">
+                  <svg class="b-footer-button__icon b-footer-button__icon_location">
+                    <use xlink:href="#icon_location"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="b-footer-nav__item">
+                <a href="polls.html" class="b-footer-button item-link">
+                  <svg class="b-footer-button__icon b-footer-button__icon_poll">
+                    <use xlink:href="#icon_poll"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="b-footer-nav__item">
+                <a href="notifications.html" class="b-footer-button item-link">
+                  <div class="b-footer-button__tip b-tip">
+                    <div class="b-tip__body">9</div>
+                    <svg class="b-footer-button__icon b-footer-button__icon_bell">
+                      <use xlink:href="#icon_bell"></use>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+     </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/svg.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+  </body>
+</html>

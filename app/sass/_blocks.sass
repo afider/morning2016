@@ -764,7 +764,7 @@ input:-ms-input-placeholder
 	display: flex
 	//justify-content: flex-start
 	overflow: auto
-	background: $color_bg
+	background: $color_bg_light
 	height: $sub-navbar_h
 	width: 100%
 	+rem(font-size, 12px)
@@ -798,6 +798,10 @@ input:-ms-input-placeholder
 				height: 2px
 				background: $color_second
 
+	&_content-align_left &__item
+		justify-content: flex-start
+		text-align: left
+
 	&__text
 		line-height: 1.2
 
@@ -814,10 +818,13 @@ input:-ms-input-placeholder
 
 	&__content
 		padding: $page-inner-space
-		background: #fff
 
 		&_nospace
 			padding: 0
+
+		&_page-bg
+			background: #fff
+			border-bottom: 1px solid $color_border
 
 /* b-tabs
 /* ---------------------------------------END--- */
@@ -827,6 +834,9 @@ input:-ms-input-placeholder
 /* --------------------------------------------- */
 
 .b-contacts
+	background: #fff
+	margin-bottom: $content_bot_space
+	
 	&__lst
 		margin: 0
 		padding: 0
@@ -968,7 +978,7 @@ input:-ms-input-placeholder
 .b-event
 	$prop_h: 52px
 	background: #fff
-	border-top: 2px solid #fff
+	border-top: 1px solid #fff
 	margin-bottom: 30px
 	
 	&__header
@@ -1390,6 +1400,18 @@ input:-ms-input-placeholder
 	box-sizing: border-box
 
 /* b-main-h
+/* ---------------------------------------END--- */
+
+
+/* b-section-h
+/* --------------------------------------------- */
+
+.b-section-h
+	margin: 0
+	font-weight: bold
+	+rem(font-size, 20px)
+
+/* b-section-h
 /* ---------------------------------------END--- */
 
 
