@@ -1892,10 +1892,28 @@ input:-ms-input-placeholder {
   width: 16px;
   height: 16px;
   color: #fff;
+  position: relative;
 }
 .b-filter-ctrl__icon {
   width: 16px;
   height: 16px;
+}
+.b-filter-ctrl__num {
+  z-index: 2;
+  position: absolute;
+  top: -7px;
+  right: -50%;
+  background: #f8ae19;
+  color: #fff;
+  min-width: 16px;
+  height: 16px;
+  line-height: 17px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0 2px;
+  font-size: 9px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
 /* b-filter-ctrl */
@@ -2007,7 +2025,7 @@ input:-ms-input-placeholder {
 }
 
 .navbar .left a + a, .navbar .right a + a {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .navbar-inner,
