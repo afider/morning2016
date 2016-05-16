@@ -909,10 +909,6 @@ input:-ms-input-placeholder
 	background: linear-gradient(to top, #0589c5, #38bbec)
 
 	&__close
-		background-image: url("../img/welcome.png")
-		background-position: center center
-		background-repeat: no-repeat
-
 		display: block
 		position: absolute
 		top: 0
@@ -921,6 +917,14 @@ input:-ms-input-placeholder
 		left: 0
 		overflow: hidden
 		text-indent: 9999px
+
+	&__img
+		width: 530px
+		height: 530px
+		position: absolute
+		top: 50%
+		left: 50%
+		@include translate(-50%, -50%)
 
 /* b-welcome-screen
 /* ---------------------------------------END--- */
