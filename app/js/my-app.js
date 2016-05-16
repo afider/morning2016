@@ -74,12 +74,38 @@ myApp.onPageInit('*', function (page) {
             text: 'Применить',
             bold: true,
             onClick: function () {
-              myApp.alert('Отфильтровано!')
+              myApp.alert('Отфильтровано!');
             }
           },
         ]
-      })
+      });
     });
+
+    var pickerShift = myApp.picker({
+        input: '#shift',
+        toolbarCloseText: 'Готово',
+        cols: [
+            {   
+                textAlign: 'center',
+                values: ['Первая смена', 'Вторая смена']
+            }
+        ]
+    });
+
+    var pickerTime = myApp.picker({
+        input: '#event-time',
+        toolbarCloseText: 'Готово',
+        cols: [
+            {   
+                textAlign: 'center',
+                values: ['За 5 мин', 'За 10 мин', 'За 15 мин', 'За 20 мин', 'За 25 мин', 'За 30 мин', 'За 35 мин', 'За 40 мин', 'За 45 мин', 'За 50 мин', 'За 50 мин', 'За 60 мин']
+            }
+        ]
+    });
+
+
+
+
 
 });
 
@@ -98,12 +124,37 @@ $$('.open-filter').on('click', function () {
         text: 'Применить',
         bold: true,
         onClick: function () {
-          myApp.alert('Отфильтровано!')
+          myApp.alert('Отфильтровано!');
         }
       },
     ]
-  })
+  });
+
 });
+
+
+var pickerTime = myApp.picker({
+    input: '#event-time',
+    toolbarCloseText: 'Готово',
+    cols: [
+        {   
+            textAlign: 'center',
+            values: ['За 5 мин', 'За 10 мин', 'За 15 мин', 'За 20 мин', 'За 25 мин', 'За 30 мин', 'За 35 мин', 'За 40 мин', 'За 45 мин', 'За 50 мин', 'За 50 мин', 'За 60 мин']
+        }
+    ]
+});
+
+var pickerShift = myApp.picker({
+    input: '#shift',
+    toolbarCloseText: 'Готово',
+    cols: [
+        {   
+            textAlign: 'center',
+            values: ['Первая смена', 'Вторая смена']
+        }
+    ]
+});
+
 
 // Generate dynamic page
 var dynamicPageIndex = 0;

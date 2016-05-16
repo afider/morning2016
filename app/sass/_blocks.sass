@@ -776,6 +776,7 @@ input:-ms-input-placeholder
 		-webkit-appearance: none
 		opacity: 0 !important
 
+
 	&__item
 		flex-grow: 1
 		display: flex
@@ -797,6 +798,12 @@ input:-ms-input-placeholder
 				right: 0
 				height: 2px
 				background: $color_second
+
+	&_color_main &__item
+		&.active
+			color: $color_main
+			&:before
+				background: $color_main
 
 	&_content-align_left &__item
 		justify-content: flex-start
@@ -1527,8 +1534,60 @@ input:-ms-input-placeholder
 			transform: rotate(-45deg)
 			left: 11px
 
-			
-
-
 /* b-modal
+/* ---------------------------------------END--- */
+
+
+/* b-form-list
+/* --------------------------------------------- */
+
+.b-form-list
+	background: #fff
+	$height: 70px
+
+	&__lst
+		margin: 0
+		padding: 0
+		list-style-type: none
+		
+	&__item
+		margin: 0
+		padding: 0
+		display: flex
+		border-bottom: 1px solid $color_border
+
+	&__title
+		+rem(font-size, 14px)
+		line-height: 1.2
+		padding: 0 $page-inner-space/2 0 $page-inner-space
+		display: flex
+		align-items: center
+		width: 55%
+	
+
+	&__element
+		width: 45%
+		position: relative
+
+	&__picker
+		width: 100%
+		box-sizing: border-box
+		border: none
+		height: $height
+		padding-right: $page-inner-space + 20px
+		text-align: right
+		+rem(font-size, 14px)
+		font-weight: bold
+		color: $color_main
+
+	&__picker-icon
+		+new-svg-h($new_w: 10px, $old_w: 83px, $old_h: 41px)
+		color: $color_main
+		position: absolute
+		top: 50%
+		@include translate(0, -50%)
+		right: $page-inner-space
+
+
+/* b-form-list
 /* ---------------------------------------END--- */

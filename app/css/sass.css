@@ -1325,6 +1325,12 @@ input:-ms-input-placeholder {
   height: 2px;
   background: #f8ae19;
 }
+.b-tab-nav_color_main .b-tab-nav__item.active {
+  color: #31b5e8;
+}
+.b-tab-nav_color_main .b-tab-nav__item.active:before {
+  background: #31b5e8;
+}
 .b-tab-nav_content-align_left .b-tab-nav__item {
   justify-content: flex-start;
   text-align: left;
@@ -2021,6 +2027,62 @@ input:-ms-input-placeholder {
 
 /* b-modal */
 /* ---------------------------------------END--- */
+/* b-form-list */
+/* --------------------------------------------- */
+.b-form-list {
+  background: #fff;
+}
+.b-form-list__lst {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.b-form-list__item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-bottom: 1px solid #d6d6d6;
+}
+.b-form-list__title {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 0 7.5px 0 15px;
+  display: flex;
+  align-items: center;
+  width: 55%;
+}
+.b-form-list__element {
+  width: 45%;
+  position: relative;
+}
+.b-form-list__picker {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  height: 70px;
+  padding-right: 35px;
+  text-align: right;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #31b5e8;
+}
+.b-form-list__picker-icon {
+  width: 10px;
+  height: 4.93976px;
+  color: #31b5e8;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  right: 15px;
+}
+
+/* b-form-list */
+/* ---------------------------------------END--- */
 .page {
   background: #fff;
 }
@@ -2085,6 +2147,19 @@ input:-ms-input-placeholder {
 .navbar,
 .subnavbar {
   background: #31b5e8;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.view-main[data-page="cabinet"] .navbar,
+.view-main[data-page="cabinet"] .subnavbar {
+  background: #f8ae19;
 }
 
 .content-block {
@@ -2149,4 +2224,23 @@ input:-ms-input-placeholder {
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
   padding: 0 16px;
+}
+
+.picker-modal {
+  background: #fff;
+}
+
+.picker-modal .toolbar {
+  background: #f7f7f7;
+}
+.picker-modal .toolbar:before {
+  background: #a7a7a7;
+}
+
+.picker-modal .picker-center-highlight:before, .picker-modal .picker-center-highlight:after {
+  background: #cdcdcd;
+}
+
+.picker-modal .close-picker {
+  margin-right: 15px;
 }

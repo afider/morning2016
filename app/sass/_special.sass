@@ -50,6 +50,12 @@
 .navbar, 
 .subnavbar
 	background: $color_main
+	+transition-duration($animation-time)
+	+transition-property(background-color)
+
+.view-main[data-page="cabinet"] .navbar,
+.view-main[data-page="cabinet"] .subnavbar
+	background: $color_second
 
 .content-block
 	margin-top: 0
@@ -105,3 +111,19 @@
 html:not(.watch-active-state) .modal-button:active,
 .modal-button.active-state
 	
+.picker-modal
+	background: #fff
+.picker-modal .toolbar
+	background: #f7f7f7
+	&:before
+		background: #a7a7a7
+
+
+.picker-modal .picker-center-highlight
+	&:before,
+	&:after
+		background: #cdcdcd
+
+
+.picker-modal .close-picker
+	margin-right: $page-inner-space
