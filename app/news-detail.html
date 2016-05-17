@@ -92,6 +92,11 @@
     </div>
     <div class="center sliding">Новость</div>
     <div class="right">
+      <a href="#" data-popover=".popover-share" class="b-share-ctrl open-popover">
+        <svg class="b-share-ctrl__icon">
+          <use xlink:href="#icon_share"></use>
+        </svg>
+      </a>
       <a href="#" class="link open-panel b-nav-button">
         <div class="b-nav-button__item b-nav-button__item_top"></div>
         <div class="b-nav-button__item b-nav-button__item_center"></div>
@@ -300,7 +305,6 @@
 
 
 
-
      </div>
     </div>
     <!-- Path to Framework7 Library JS-->
@@ -309,5 +313,33 @@
     <script type="text/javascript" src="js/svg.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
     
+   
+    <div class="popover popover-share b-share-popup">
+      <div class="popover-angle b-share-popup__angle"></div>
+      <div class="popover-inner">
+        <div class="content-block b-share-popup__body">
+          <div class="b-share-popup__h">Поделиться ссылкой:</div>
+
+          <div class="b-share-popup__links">
+            <a href="#" class="b-share-popup__link">
+              <svg class="b-share-popup__icon">
+                <use xlink:href="#icon_vk"></use>
+              </svg>
+            </a>
+            <a href="#" class="b-share-popup__link">
+              <svg class="b-share-popup__icon">
+                <use xlink:href="#icon_facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="b-share-popup__link">
+              <svg class="b-share-popup__icon">
+                <use xlink:href="#icon_twitter"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

@@ -1460,6 +1460,23 @@ input:-ms-input-placeholder
 /* ---------------------------------------END--- */
 
 
+/* b-share-ctrl
+/* --------------------------------------------- */
+
+.b-share-ctrl
+	$filter_dim: 16px
+	width: $filter_dim
+	height: $filter_dim
+	color: #fff
+	position: relative
+
+	&__icon
+		+new-svg-h($new_w: 16px, $old_w: 30px, $old_h: 32px)
+
+/* b-share-ctrl
+/* ---------------------------------------END--- */
+
+
 /* b-modal
 /* --------------------------------------------- */
 
@@ -1594,4 +1611,60 @@ input:-ms-input-placeholder
 
 
 /* b-form-list
+/* ---------------------------------------END--- */
+
+
+/* b-share-popup
+/* --------------------------------------------- */
+
+.b-share-popup
+	background: none
+	margin-top: 0 !important
+	//display: flex
+	//align-items: center
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: #000
+		opacity: 0.50
+
+	&__angle
+		display: none
+		&:after
+			background: #000
+			opacity: 0.50
+		
+	&__body
+		position: relative
+		z-index: 1
+		color: #fff !important
+		padding-top: 25px !important
+		padding-bottom: 25px !important
+		text-align: center
+
+
+	& + .modal-overlay
+		background: none
+	
+	&__h
+		margin-bottom: 20px
+
+	&__links
+		text-align: center
+
+	&__link
+		display: inline-block
+		margin: 0 20px
+
+	&__icon
+		width: 44px
+		height: 44px
+		color: #fff
+
+/* b-share-popup
 /* ---------------------------------------END--- */
