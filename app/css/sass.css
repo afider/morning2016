@@ -623,7 +623,7 @@ input:-ms-input-placeholder {
   text-align: center;
   display: inline-block;
   border-radius: 16px;
-  line-height: 32px;
+  line-height: 35px;
   height: 32px;
   min-width: 120px;
   box-sizing: border-box;
@@ -728,6 +728,12 @@ input:-ms-input-placeholder {
 /* --------------------------------------------- */
 .b-nav-button {
   display: inline-block;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  right: -15px;
+}
+.b-nav-button__body {
   position: relative;
   width: 18px !important;
   height: 14px !important;
@@ -1103,7 +1109,7 @@ input:-ms-input-placeholder {
   width: 40px;
   height: 40px;
   background: #31b5e8;
-  border-radius: 50%;
+  border-radius: 20px;
   position: relative;
 }
 .b-list__icon {
@@ -2185,7 +2191,7 @@ input:-ms-input-placeholder {
 }
 
 .navbar .left a + a, .navbar .right a + a {
-  margin-left: 15px;
+  margin-left: 0;
 }
 
 .navbar-inner,
