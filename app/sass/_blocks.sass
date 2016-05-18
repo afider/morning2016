@@ -414,6 +414,8 @@ input:-ms-input-placeholder
 .b-main-teasers
 	color: #fff
 	$item-margin: 3px
+	margin-left: - $item-margin
+	margin-right: - $item-margin
 	&__lst
 		margin: -$item-margin -$item-margin 0 -$item-margin
 		padding: 0
@@ -542,14 +544,31 @@ input:-ms-input-placeholder
 	$circle-dim: 40px
 	$height: 60px
 
+	&_layout_cards
+		+min-screen($mq_tablet_portrait_less - 1 )
+			background: none
+			border-bottom: none
+			padding: $page-inner-space / 2
+
 	&__lst
 		margin: 0
 		padding: 0
 		list-style-type: none
+
+	&_layout_cards &__lst
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: flex
+			flex-wrap: wrap
 		
 	&__item
 		margin: 0
 		padding: 0
+
+	&_layout_cards &__item
+		+min-screen($mq_tablet_portrait_less - 1 )
+			width: (100%/2)
+		+min-screen($mq_tablet_landscape - 1 )
+			width: (100%/3)
 		
 	&__act
 		display: flex
@@ -559,6 +578,15 @@ input:-ms-input-placeholder
 
 		&:active
 			@extend %active-state
+
+	&_layout_cards &__act
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: block
+			text-align: center
+			background: #fff
+			padding: $page-inner-space
+			margin: $page-inner-space / 2
+
 			
 	
 	&__item:last-child &__img
@@ -569,6 +597,12 @@ input:-ms-input-placeholder
 		border-bottom: 1px solid $color_border
 		display: flex
 		align-items: center
+
+	&_layout_cards &__img
+		+min-screen($mq_tablet_portrait_less - 1 )
+			width: auto
+			display: block
+			border-bottom: none
 	
 	&__circle
 		width: $circle-dim
@@ -576,6 +610,15 @@ input:-ms-input-placeholder
 		background: $color_main
 		border-radius: $circle-dim/2
 		position: relative
+
+	&_layout_cards &__circle
+		+min-screen($mq_tablet_portrait_less - 1 )
+			width: 100px
+			height: 100px
+			display: block
+			border-radius: 50px
+			margin: auto
+			margin-bottom: 10px
 
 	&__icon
 		position: absolute
@@ -665,6 +708,19 @@ input:-ms-input-placeholder
 		&_day
 			padding-left: 0
 
+	&_layout_cards &__h
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: block
+			padding: 0
+			border-bottom: none
+			+rem(font-size, 18px)
+			letter-spacing: 1px
+
+	&_layout_cards &__name-part
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: block
+		
+
 	&__body
 		line-height: 1.2
 		width: 100%
@@ -681,6 +737,12 @@ input:-ms-input-placeholder
 		width: $circle-dim
 		height: $circle-dim
 		border-radius: 50%
+
+	&_layout_cards &__avatar
+		+min-screen($mq_tablet_portrait_less - 1 )
+			width: 100px
+			height: 100px
+			border-radius: 50px
 
 	&__day-h
 		font-weight: bold
@@ -717,6 +779,11 @@ input:-ms-input-placeholder
 	&__area-h
 		color: $color_main
 		+rem(font-size, 10px)
+
+	&_layout_cards &__area-h
+		+min-screen($mq_tablet_portrait_less - 1 )
+			margin-top: 5px
+			+rem(font-size, 14px)
 
 /* b-list
 /* ---------------------------------------END--- */
@@ -850,28 +917,60 @@ input:-ms-input-placeholder
 .b-contacts
 	background: #fff
 	margin-bottom: $content_bot_space
+	+min-screen($mq_tablet_portrait_less - 1 )
+		background: none
+		padding: 0 $page-inner-space / 2
+		margin-top: - $page-inner-space / 2
 	
 	&__lst
 		margin: 0
 		padding: 0
 		list-style-type: none
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: flex
+			flex-wrap: wrap
 		
 	&__item
 		margin: 0
 		padding: 0
-		list-style-type: none
+		+min-screen($mq_tablet_portrait_less - 1 )
+			width: (100%/2)
+		+min-screen($mq_tablet_landscape - 1 )
+			width: (100%/3)
+
+	&__item-inner
 		display: table
 		width: 100%
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: block
+			text-align: center
+			background: #fff
+			padding: $page-inner-space
+			margin: $page-inner-space / 2
+			width: auto
+			text-align: center
 	
 	&__photo
 		width: 90px
 		border-bottom: 1px solid #fff
 		display: table-cell
 		vertical-align: top
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: block
+			border-bottom: none
+			width: 100px
+			height: 100px
+			border-radius: 50px
+			margin: auto
+			margin-bottom: 10px
 
 	&__img
 		width: 90px
 		display: block
+		+min-screen($mq_tablet_portrait_less - 1 )
+			border-radius: 50px
+			width: 100px
+			height: 100px
 
 	&__body
 		display: table-cell
@@ -881,6 +980,10 @@ input:-ms-input-placeholder
 		+rem(font-size, 12px)
 		line-height: 1.2
 		min-height: 90px
+		+min-screen($mq_tablet_portrait_less - 1 )
+			padding: 0
+			display: block
+			border-bottom: none
 		
 	&__phone-icon
 		width: 16px
@@ -898,9 +1001,22 @@ input:-ms-input-placeholder
 	&__name
 		text-transform: uppercase
 		margin-bottom: 5px
+		+min-screen($mq_tablet_portrait_less - 1 )
+			+rem(font-size, 18px)
+			letter-spacing: 1px
+
+	&__name-part
+		+min-screen($mq_tablet_portrait_less - 1 )
+			display: block
 
 	&__desc
 		margin-bottom: 5px
+		+min-screen($mq_tablet_portrait_less - 1 )
+			width: 70%
+			margin: auto
+			+rem(font-size, 13px)
+			margin-bottom: 5px
+			min-height: 60px
 
 
 /* b-contacts
@@ -1428,6 +1544,8 @@ input:-ms-input-placeholder
 	margin: 0
 	font-weight: bold
 	+rem(font-size, 20px)
+	+min-screen($mq_tablet_portrait_less - 1 )
+		+rem(font-size, 24px)
 
 /* b-section-h
 /* ---------------------------------------END--- */
