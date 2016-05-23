@@ -1454,6 +1454,9 @@ input:-ms-input-placeholder {
   height: 2px;
   background: #f8ae19;
 }
+.b-tab-nav_active-color_dark .b-tab-nav__item.active {
+  color: #5b5b5b;
+}
 .b-tab-nav_color_main .b-tab-nav__item.active {
   color: #31b5e8;
 }
@@ -1469,6 +1472,20 @@ input:-ms-input-placeholder {
 }
 .b-tab-nav__text {
   line-height: 1.2;
+}
+.b-tab-nav__date {
+  font-size: 10px;
+  font-size: 1rem;
+  color: #5b5b5b !important;
+}
+.b-tab-nav__item.active .b-tab-nav__date {
+  display: block;
+}
+.b-tab-nav__date {
+  font-size: 10px;
+  font-size: 1rem;
+  color: #5b5b5b !important;
+  display: none;
 }
 
 /* b-tab-nav */

@@ -873,6 +873,10 @@ input:-ms-input-placeholder
 				height: 2px
 				background: $color_second
 
+	&_active-color_dark &__item
+		&.active
+			color: $text_color_light
+
 	&_color_main &__item
 		&.active
 			color: $color_main
@@ -885,6 +889,19 @@ input:-ms-input-placeholder
 
 	&__text
 		line-height: 1.2
+
+
+	&__date
+		+rem(font-size, 10px)
+		color: $text_color_light !important
+	
+	&__item.active &__date
+		display: block
+
+	&__date
+		+rem(font-size, 10px)
+		color: $text_color_light !important
+		display: none
 
 /* b-tab-nav
 /* ---------------------------------------END--- */
