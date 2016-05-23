@@ -81,6 +81,11 @@ myApp.onPageInit('*', function (page) {
       });
     });
 
+
+
+
+    
+
     var pickerShift = myApp.picker({
         input: '#shift',
         toolbarCloseText: 'Готово',
@@ -104,9 +109,34 @@ myApp.onPageInit('*', function (page) {
     });
 
 
+    $$('.js-select').each(function() {
+
+        var self = $$(this);
+
+        self.on('change', function () {
+
+          var self = $$(this);
+          var value = self.val();
+
+          self.parent().find('.js-select__val').html(value);
+        });
+    });
 
 
+});
 
+
+$$('.js-select').each(function() {
+
+    var self = $$(this);
+
+    self.on('change', function () {
+
+      var self = $$(this);
+      var value = self.val();
+
+      self.parent().find('.js-select__val').html(value);
+    });
 });
 
 

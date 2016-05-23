@@ -2245,6 +2245,13 @@ input:-ms-input-placeholder {
   padding: 0;
   display: flex;
   border-bottom: 1px solid #d6d6d6;
+  position: relative;
+}
+.b-form-list__item_select {
+  display: block;
+}
+.b-form-list__select-body {
+  display: flex;
 }
 .b-form-list__title {
   font-size: 14px;
@@ -2258,6 +2265,7 @@ input:-ms-input-placeholder {
 .b-form-list__element {
   width: 45%;
   position: relative;
+  height: 70px;
 }
 .b-form-list__picker {
   width: 100%;
@@ -2282,6 +2290,27 @@ input:-ms-input-placeholder {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   right: 14px;
+}
+.b-form-list__select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.b-form-list__select-val {
+  height: 70px;
+  line-height: 70px;
+  padding-right: 34px;
+  text-align: right;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #31b5e8;
 }
 
 /* b-form-list */

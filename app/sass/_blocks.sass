@@ -1701,6 +1701,13 @@ input:-ms-input-placeholder
 		padding: 0
 		display: flex
 		border-bottom: 1px solid $color_border
+		position: relative
+
+		&_select
+			display: block
+
+	&__select-body
+		display: flex
 
 	&__title
 		+rem(font-size, 14px)
@@ -1714,6 +1721,7 @@ input:-ms-input-placeholder
 	&__element
 		width: 45%
 		position: relative
+		height: $height
 
 	&__picker
 		width: 100%
@@ -1733,6 +1741,26 @@ input:-ms-input-placeholder
 		top: 50%
 		@include translate(0, -50%)
 		right: $page-inner-space
+
+	&__select
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		height: $height
+		width: 100%
+		z-index: 1
+		opacity: 0
+
+	&__select-val
+		height: $height
+		line-height: $height
+		padding-right: $page-inner-space + 20px
+		text-align: right
+		+rem(font-size, 14px)
+		font-weight: bold
+		color: $color_main
 
 
 /* b-form-list
