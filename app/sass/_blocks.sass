@@ -1202,6 +1202,7 @@ input:-ms-input-placeholder
 		display: table
 		width: 100%
 		color: inherit
+		overflow: hidden
 
 		&:active
 			@extend %active-state
@@ -1221,13 +1222,18 @@ input:-ms-input-placeholder
 
 	&__photo
 		width: $photo_dim
+		height: $photo_dim
 		border-bottom: 1px solid #fff
 		box-sizing: border-box
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
 
 		+max-screen($mq_phone_portrait - 1)
-			width: auto
-			padding-left: $page-inner-space
-			padding-top: 8px
+			display: block
+			margin-top: 8px
+			margin-left: $page-inner-space
+
 
 	&__img
 		display: block

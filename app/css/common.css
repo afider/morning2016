@@ -1822,6 +1822,7 @@ input:-ms-input-placeholder {
   display: table;
   width: 100%;
   color: inherit;
+  overflow: hidden;
 }
 @media screen and (max-width: 319px) {
   .b-news__item {
@@ -1841,14 +1842,18 @@ input:-ms-input-placeholder {
 }
 .b-news__photo {
   width: 80px;
+  height: 80px;
   border-bottom: 1px solid #fff;
   box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 @media screen and (max-width: 319px) {
   .b-news__photo {
-    width: auto;
-    padding-left: 14px;
-    padding-top: 8px;
+    display: block;
+    margin-top: 8px;
+    margin-left: 14px;
   }
 }
 .b-news__img {
