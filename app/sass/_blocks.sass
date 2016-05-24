@@ -1046,9 +1046,9 @@ input:-ms-input-placeholder
 
 .b-welcome-screen
 	position: relative
-	background: linear-gradient(to top, #0589c5, #38bbec)
 
 	&__close
+		background: linear-gradient(to top, #0589c5, #38bbec) !important
 		display: block
 		position: absolute
 		top: 0
@@ -1056,7 +1056,8 @@ input:-ms-input-placeholder
 		bottom: 0
 		left: 0
 		overflow: hidden
-		text-indent: 9999px
+		z-index: 100
+		//text-indent: 9999px
 
 	&__img
 		width: 530px
