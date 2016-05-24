@@ -1844,3 +1844,52 @@ input:-ms-input-placeholder
 
 /* b-share-popup
 /* ---------------------------------------END--- */
+
+
+/* b-msg
+/* --------------------------------------------- */
+
+.b-msg
+	background: #fff
+	&__item
+		margin: 0
+		padding: 0
+		padding: $page-inner-space
+		border-bottom: 1px solid $color_border
+		color: inherit
+		display: block
+		position: relative
+
+		&_important
+			background: $color_second_light2
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -1px
+				height: 2px
+				background: $color_second
+				
+
+
+	&__header
+		text-transform: uppercase
+		color: $color_main
+		+rem(font-size, 16px)
+		font-weight: bold
+		margin-bottom: 5px
+
+	&__body
+		line-height: 1.2
+
+	&__legend
+		margin-top: 7px
+		text-transform: uppercase
+		color: $text_color_light
+		+rem(font-size, 12px)
+		
+
+/* b-msg
+/* ---------------------------------------END--- */

@@ -2476,6 +2476,54 @@ input:-ms-input-placeholder {
 
 /* b-share-popup */
 /* ---------------------------------------END--- */
+/* b-msg */
+/* --------------------------------------------- */
+.b-msg {
+  background: #fff;
+}
+.b-msg__item {
+  margin: 0;
+  padding: 0;
+  padding: 14px;
+  border-bottom: 1px solid #d6d6d6;
+  color: inherit;
+  display: block;
+  position: relative;
+}
+.b-msg__item_important {
+  background: #f4e2bc;
+}
+.b-msg__item_important:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: #f8ae19;
+}
+.b-msg__header {
+  text-transform: uppercase;
+  color: #31b5e8;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.b-msg__body {
+  line-height: 1.2;
+}
+.b-msg__legend {
+  margin-top: 7px;
+  text-transform: uppercase;
+  color: #5b5b5b;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* b-msg */
+/* ---------------------------------------END--- */
 .page {
   background: #fff;
 }

@@ -1,3 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/common.css">
+  </head>
+  <body>
+    <div id="svg-icons"></div>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+       
+        <div class="b-main-nav">
+          <ul class="b-main-nav__lst">
+            <li class="b-main-nav__item">
+              <a href="index.html" class="item-link close-panel b-main-nav__act">
+                Главная
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="cabinet.html" class="item-link close-panel b-main-nav__act">
+                Личный кабинет
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="forum-about.html" class="item-link close-panel b-main-nav__act">
+                О форуме
+              </a>
+            </li>
+            <li class="b-main-nav__item is-active">
+              <a href="areas.html" class="item-link close-panel b-main-nav__act">
+                Площадки
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="news.html" class="item-link close-panel b-main-nav__act">
+                Новости
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="experts.html" class="item-link close-panel b-main-nav__act">
+                Эксперты
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="programs.html" class="item-link close-panel b-main-nav__act">
+                Программы
+              </a>
+            </li>
+            <li class="b-main-nav__item">
+              <a href="morning24.html" class="item-link close-panel b-main-nav__act">
+                Утро 24
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+
+
+
 
 <!-- We don't need full layout here, because this page will be parsed with Ajax-->
 <!-- Top Navbar-->
@@ -22,17 +100,34 @@
     </div>
   </div>
 </div>
-<div class="pages">
+<div class="pages navbar-through">
   <!-- Page, data-page contains page name-->
-  <div data-page="notifications" class="page">
+  <div data-page="notifications" class="page b-page-bg page-no-space">
     <!-- Scrollable page content-->
     <div class="page-content">
       <div class="content-block">
         <div class="content-block-inner">
-          <p>Уведомления</p>
-          <p>Go <a href="#" class="back">back</a> or click  <a href="#" class="create-page">here </a>to create dynamic page.</p>
-          <p>Mauris posuere sit amet metus id venenatis. Ut ante dolor, tempor nec commodo rutrum, varius at sem. Nullam ac nisi non neque ornare pretium. Nulla mauris mauris, consequat et elementum sit amet, egestas sed orci. In hac habitasse platea dictumst.</p>
-          <p>Fusce eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis. Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel et nisi. Aenean aliquet, felis quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu metus elit. Ut vel diam dolor.</p>
+          
+
+          <div class="b-msg">
+            <div class="b-msg__item b-msg__item_important">
+              <div class="b-msg__header">Вадим Кочетов:</div>
+              <div class="b-msg__body">Всем выступающим просьба собраться всех в зале для совещаний.</div>
+              <div class="b-msg__legend">2 минуты назад</div>
+            </div>
+            <div class="b-msg__item">
+              <div class="b-msg__header">Алена Петровская:</div>
+              <div class="b-msg__body">Всем выступающим просьба собраться всех в зале для совещаний. Нарисовать экран с уведомлениями. За основу можно взять это оф...</div>
+              <div class="b-msg__legend">2 минуты назад</div>
+            </div>
+            <a href="#" class="b-msg__item">
+              <div class="b-msg__header">федор Емельяненко:</div>
+              <div class="b-msg__body">Всем выступающим всем выступающим просьба собраться всех в зале для совещаний.можно взять.</div>
+              <div class="b-msg__legend">2 минуты назад</div>
+            </a>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -86,3 +181,20 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+     </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/svg.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    
+  </body>
+</html>
