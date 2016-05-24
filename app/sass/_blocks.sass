@@ -445,6 +445,8 @@ input:-ms-input-placeholder
 		color: #fff
 		background: $color_main
 		padding: 10px
+		+min-screen($mq_tablet_portrait_less + 1)
+			padding: $page-inner-space
 
 		&:active
 			@extend %active-state-bg
@@ -515,9 +517,17 @@ input:-ms-input-placeholder
 		+rem(font-size, 10px)
 
 	&__h
+		+min-screen($mq_tablet_portrait_less + 1)
+			+rem(font-size, 20px)
+			font-weight: bold
 		
 	&__sub-h
 		font-weight: bold
+		+min-screen($mq_tablet_portrait_less + 1)
+			+rem(font-size, 18px)
+			font-weight: normal
+			letter-spacing: 1px
+			font-family: 'Etelka Text Pro Light', $font_main
 		
 
 /* b-main-teasers
@@ -1212,6 +1222,7 @@ input:-ms-input-placeholder
 
 .b-news
 	$photo_dim: 80px
+	$photo_dim_big: 130px
 
 	background: #fff
 	margin-bottom: $content_bot_space
@@ -1238,6 +1249,9 @@ input:-ms-input-placeholder
 			display: block
 			height: auto
 
+		+min-screen($mq_tablet_portrait_less + 1)
+			height: $photo_dim_big
+
 	&__photo
 		width: $photo_dim
 		height: $photo_dim
@@ -1252,10 +1266,13 @@ input:-ms-input-placeholder
 			margin-top: 8px
 			margin-left: $page-inner-space
 
+		+min-screen($mq_tablet_portrait_less + 1)
+			width: $photo_dim_big
+			height: $photo_dim_big
+
 
 	&__img
 		display: block
-		max-width: $photo_dim
 
 	&__body
 		padding: 8px 10px 8px $page-inner-space
@@ -1269,11 +1286,17 @@ input:-ms-input-placeholder
 		overflow: hidden
 		+max-screen($mq_phone_portrait - 1)
 			height: auto
+		+min-screen($mq_tablet_portrait_less + 1)
+			height: 92px
+			+rem(font-size, 16px)
 
 	&__date
 		margin-top: 6px
 		+rem(font-size, 10px)
 		color: $text_color_light
+
+		+min-screen($mq_tablet_portrait_less + 1)
+			+rem(font-size, 14px)
 
 
 /* b-news
@@ -1740,6 +1763,8 @@ input:-ms-input-placeholder
 		display: flex
 		align-items: center
 		width: 55%
+		+min-screen($mq_tablet_portrait_less + 1)
+			+rem(font-size, 18px)
 	
 
 	&__element
@@ -1757,6 +1782,8 @@ input:-ms-input-placeholder
 		+rem(font-size, 14px)
 		font-weight: bold
 		color: $color_main
+		+min-screen($mq_tablet_portrait_less + 1)
+			+rem(font-size, 18px)
 
 	&__picker-icon
 		+new-svg-h($new_w: 10px, $old_w: 83px, $old_h: 41px)
@@ -1785,6 +1812,9 @@ input:-ms-input-placeholder
 		+rem(font-size, 14px)
 		font-weight: bold
 		color: $color_main
+
+		+min-screen($mq_tablet_portrait_less + 1)
+			+rem(font-size, 18px)
 
 
 /* b-form-list
