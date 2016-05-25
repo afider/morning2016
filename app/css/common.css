@@ -2676,10 +2676,6 @@ input:-ms-input-placeholder {
 }
 
 .page-content {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: padding-top;
-  transition-property: padding-top;
   padding-bottom: 60px;
 }
 
